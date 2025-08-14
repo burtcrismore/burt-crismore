@@ -1,0 +1,3 @@
+@burtcrismore:registry=https://npm.pkg.github.com
+always-auth=true
+//npm.pkg.github.com/:_authToken=${HELIUM_TOKEN}
