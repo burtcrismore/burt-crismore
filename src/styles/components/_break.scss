@@ -1,0 +1,28 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/functions/token-prefix" as *;
+
+/*
+=================================================
+Break
+================================================= 
+*/
+.break {
+	display: grid;
+	gap: 12px;
+	
+	&__start {
+		grid-template-columns: 12px 1fr;
+	}
+	&__end {
+		grid-template-columns: 1fr 12px;
+	}
+
+	&__line {
+		background: token(color-surface-brand);
+		height: 12px;
+	}
+}

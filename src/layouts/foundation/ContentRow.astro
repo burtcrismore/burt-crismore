@@ -1,0 +1,27 @@
+---
+import CardRow from "./CardRow.astro";
+
+const { grid, spacing, gap, component } = Astro.props;
+
+const componentMap = {
+	CardRow
+}
+const Component = component?.type
+	? componentMap[component.type as keyof typeof componentMap]
+	: null;
+
+const classList = [
+	"grid", 
+	// "content-row-gap", 
+	grid, 
+	spacing, 
+	// gap
+].filter(Boolean).join(' ');
+---
+
+<div class="container">
+	<div class={classList}>
+		<slot />
+		{Component && <Component {...component} />}
+	</div>
+</div>

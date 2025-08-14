@@ -1,0 +1,107 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@styles/functions/token-prefix" as *;
+@use "@tools/mixins/layout/breakpoint" as *;
+
+/*
+=================================================
+Body
+================================================= 
+*/
+body {
+	background-color: token(color-surface-page);
+	color: token(color-content-default);
+	font-family: $font-face-family;
+	font-size: token(type-size-body);
+	line-height: token(type-leading-body);
+	font-weight: token(type-weight-body);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+=================================================
+Font Face
+================================================= 
+*/
+@each $weight in $font-face-font-weight {
+	@font-face {
+		font-family: "#{$font-face-family}";
+		font-style: #{$font-face-style};
+		font-weight: #{$weight};
+		src: url("#{$font-face-file}-#{$weight}.#{$font-face-format}") format("#{$font-face-format}");
+	}
+}
+
+/*
+=================================================
+Headings
+================================================= 
+*/
+h1 {
+	font-size: token(type-size-h1);
+	font-weight: token(type-weight-h1);
+	line-height: token(type-leading-h1);
+	margin: 0 0 token(space-md-4) 0;
+}
+h2 {
+	font-size: token(type-size-h2);
+	font-weight: token(type-weight-h2);
+	line-height: token(type-leading-h2);
+	margin: 0 0 token(space-sm-4) 0;
+}
+h3 {
+	font-size: token(type-size-h3);
+	font-weight: token(type-weight-h3);
+	line-height: token(type-leading-h3);
+	margin: 0 0 token(space-sm-4) 0;
+}
+h4 {
+	font-size: token(type-size-h4);
+	font-weight: token(type-weight-h4);
+	line-height: token(type-leading-h4);
+	margin: 0 0 token(space-sm-4) 0;
+}
+
+/*
+=================================================
+Paragraphs
+================================================= 
+*/
+p {
+	margin: 0 0 token(space-md-2) 0;
+}
+
+/*
+=================================================
+Lists
+================================================= 
+*/
+ul {
+	margin: token(space-md-2) 0;
+	padding: 0 0 0 token(space-md-5);
+
+	li {
+		margin: token(space-sm-3) 0;
+	}
+}
+
+/*
+=================================================
+Links
+================================================= 
+*/
+a {
+	color: token(color-content-link-default);
+	text-underline-offset: 3px;
+	text-decoration-color: token(color-action-primary);
+	transition: all token(duration-moderate) token(timing-fade);
+
+	&:hover {
+		text-underline-offset: 1px;
+	}
+}

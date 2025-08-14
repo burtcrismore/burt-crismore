@@ -1,0 +1,22 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@styles/tokens/space" as *;
+@use "@tools/mixins/utilities/utilities-space" as *;
+
+
+/*
+=================================================
+Gap
+================================================= 
+*/
+$gap-map: (
+	"gap": g,
+	"row-gap": gy,
+	"column-gap": gx
+);
+
+@include utilities-space($prefix, $breakpoint-delimiter, $token-space-name, $gap-map, $token-space-alias, $breakpoints);

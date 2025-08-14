@@ -1,0 +1,29 @@
+---
+import SectionHero from "src/layouts/foundation/SectionHero.astro";
+import Button from "src/components/Button.astro";
+import Break from "src/components/Break.astro";
+const { content } = Astro.props;
+---
+<SectionHero aria={content.section.aria}>
+	<div class="container">
+		<div class={`grid ${content.section.grid} ${content.section.spacing}`}>
+			<div class={content.section.span}>
+				<h1 class="display-2 mb-sm-5" id={content.section.aria}>{content.headline}</h1>
+				<p class="lead mb-0">{content.lead}</p>
+
+				{content.ctas && content.ctas.length > 0 && (
+					<div class="button__group">
+						{content.ctas.map((cta: any, index: number) => (
+							<Button {...cta} key={index} />
+						))}
+					</div>
+				)}
+			</div>
+		</div>
+	</div>
+
+	<Break position="start" />
+
+</SectionHero>
+
+

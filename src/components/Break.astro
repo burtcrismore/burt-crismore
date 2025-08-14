@@ -1,0 +1,9 @@
+---
+import "@styles/components/_break.scss";
+const { position = "start" } = Astro.props;
+---
+
+<div class=`container break break__${position}`>
+	<div class="break__line"></div>
+	<div class="break__line"></div>
+</div>

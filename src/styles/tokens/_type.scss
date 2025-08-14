@@ -1,0 +1,153 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/tokens/tokens-type" as *;
+
+/*
+=================================================
+Tokens
+================================================= 
+*/
+
+// Type Size
+$token-type-size-base: (
+	// 1.125 major second scale
+	"base": (
+		"100": 15,
+		"200": 18,
+		"300": 20,
+		"400": 23,
+		"500": 26,
+		"600": 29,
+		"700": 32,
+		"800": 36,
+		"900": 40,
+		"1000": 45,
+	),
+	// 1.2 minor third scale
+	"md": (
+		"100": 15,
+		"200": 18,
+		"300": 22,
+		"400": 26,
+		"500": 31,
+		"600": 37,
+		"700": 45,
+		"800": 54,
+		"900": 65,
+		"1000": 78,
+	),
+);
+
+$token-type-size-alias: (
+	"display-1": "1000",
+	"display-2": "900",
+	"headline": "800",
+	"heading": "600",
+	"subheading": "400",
+	"lead": "400",
+	"sideheading": "200",
+	"body": "200",
+	"eyebrow": "200",
+	"caption": "200",
+	"fine": "100",
+	"button": "200",
+	"chip": "100",
+	"h1": "800",
+	"h2": "600",
+	"h3": "400",
+	"h4": "200",
+	"h5": "200",
+	"h6": "200",
+	"thead": "300",
+	"tbody": "200",
+);
+
+$token-type-size-name: "type-size";
+
+@include tokens-type-size($prefix, $token-type-size-name, $token-type-size-base, $token-type-size-alias, $breakpoints);
+
+
+// Font Weight
+$token-type-weight-base: (
+	// "thin": 100,
+	// "extra-light": 200,
+	"light": 300,
+	"regular": 400,
+	"medium": 500,
+	"semi-bold": 600,
+	"bold": 700,
+	"extra-bold": 800,
+	"black": 900
+);
+
+$token-type-weight-alias: (
+	"display-1": "bold",
+	"display-2": "bold",
+	"headline": "bold",
+	"heading": "bold",
+	"subheading": "bold",
+	"lead": "regular",
+	"sideheading": "bold",
+	"body": "regular",
+	"eyebrow": "medium",
+	"caption": "medium",
+	"fine": "regular",
+	"button": "semi-bold",
+	"chip": "semi-bold",
+	"navigation": "medium",
+	"h1": "bold",
+	"h2": "bold",
+	"h3": "bold",
+	"h4": "bold",
+	"h5": "regular",
+	"h6": "regular",
+	"thead": "regular",
+	"tbody": "regular",
+);
+
+$token-type-weight-name: "type-weight";
+
+@include tokens-type-weight($prefix, $token-type-weight-name, $token-type-weight-base, $token-type-weight-alias);
+
+
+// Line Height
+$token-type-line-height-base: (
+	"100": 1.1,
+	"200": 1.2,
+	"300": 1.3,
+	"400": 1.4,
+	"500": 1.5,
+	"600": 1.6
+);
+
+$token-type-line-height-alias: (
+	"display-1": "100",
+	"display-2": "100",
+	"headline": "100",
+	"heading": "200",
+	"subheading": "200",
+	"lead": "300",
+	"sideheading": "400",
+	"body": "500",
+	"eyebrow": "500",
+	"caption": "600",
+	"fine": "600",
+	"button": "200",
+	"chip": "100",
+	"h1": "300",
+	"h2": "300",
+	"h3": "300",
+	"h4": "300",
+	"h5": "300",
+	"h6": "300",
+	"thead": "500",
+	"tbody": "500",
+);
+
+$token-type-leading-name: "type-leading";
+
+@include tokens-type-line-height($prefix, $token-type-leading-name, $token-type-line-height-base, $token-type-line-height-alias);

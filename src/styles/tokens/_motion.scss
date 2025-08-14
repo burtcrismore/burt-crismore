@@ -1,0 +1,33 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/tokens/tokens-motion" as *;
+
+/*
+=================================================
+Tokens
+================================================= 
+*/
+$token-duration: (
+  "fast": 150ms,
+  "moderate": 300ms,
+  "slow": 450ms
+);
+
+$token-timing: (
+  "enter": ease-out,
+  "exit": ease-in,
+  "fade": ease,
+  "move": ease-in-out,
+  "constant": linear
+);
+
+$token-duration-name: "duration";
+$token-timing-name: "timing";
+
+
+@include tokens-motion($prefix, $token-duration-name, $token-duration);
+@include tokens-motion($prefix, $token-timing-name, $token-timing);

@@ -1,0 +1,17 @@
+---
+const { 
+	aria, 
+	class: className 
+} = Astro.props;
+
+const classList = [
+	"grid",
+	// "section-space",
+	// "section-row-gap",
+	className
+].filter(Boolean).join(" ");
+---
+
+<section class={classList} aria-labelledby={aria}>
+	<slot />
+</section>

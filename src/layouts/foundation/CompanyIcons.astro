@@ -1,0 +1,39 @@
+---
+const { tools = [] } = Astro.props;
+
+const allIcons = {
+	Jira: { name: "Jira", icon: "/icons/jira.svg" },
+	Confluence: { name: "Confluence", icon: "/icons/confluence.svg" },
+	Workfront: { name: "Workfront", icon: "/icons/workfront.svg" },
+	Miro: { name: "Miro", icon: "/icons/miro.svg" },
+	Zeroheight: { name: "Zeroheight", icon: "/icons/zeroheight.svg" },
+	Figma: { name: "Figma", icon: "/icons/figma.svg" },
+	Adobe: { name: "Adobe", icon: "/icons/adobe.svg" },
+	HTML: { name: "HTML", icon: "/icons/html.svg" },
+	CSS: { name: "CSS", icon: "/icons/css.svg" },
+	Sass: { name: "Sass", icon: "/icons/sass.svg" },
+	JavaScript: { name: "JavaScript", icon: "/icons/javascript.svg" },
+	GitHub: { name: "GitHub", icon: "/icons/github.svg" },
+	"MS 365": { name: "MS 365", icon: "/icons/ms365.svg" },
+	Slack: { name: "Slack", icon: "/icons/slack.svg" },
+	Obsidian: { name: "Obsidian", icon: "/icons/obsidian.svg" },
+	Notion: { name: "Notion", icon: "/icons/notion.svg" },
+	Axe: { name: "Axe", icon: "/icons/axe.svg" },
+	BrowserStack: { name: "BrowserStack", icon: "/icons/browserstack.svg" },
+	Cypress: { name: "Cypress", icon: "/icons/cypress.svg" },
+	UserZoom: { name: "UserZoom", icon: "/icons/userzoom.svg" },
+};
+---
+<div class="company-icons">
+	{tools.map((tool: string) => {
+		const item = allIcons[tool as keyof typeof allIcons];
+		if (!item) return null;
+
+		return (
+			<div class="company-icons__content">
+				<img src={item.icon} alt={item.name} class="company-icons__image" />
+				<p class="company-icons__label">{item.name}</p>
+			</div>
+		);
+	})}
+</div>

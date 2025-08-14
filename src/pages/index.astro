@@ -1,0 +1,187 @@
+---
+import Base from "src/layouts/Base.astro";
+import Hero from "@layoutFoundation/Hero.astro";
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import ImageBlock from "@layoutFoundation/ImageBlock.astro";
+import FeaturedWorkList from "@layoutFoundation/FeaturedWorkList.astro";
+import Button from "src/components/Button.astro";
+import ButtonGroup from "src/components/ButtonGroup.astro";
+import CardRow from "@layoutFoundation/CardRow.astro";
+import recommendations from "src/data/recommendations";
+import featuredWorkImg from "@images/triangles.png";
+import aboutMeImg from "@images/circles.png";
+
+const seoContent = {
+	title: "Burt Crismore | Design Leader in Systems & Digital Operations",
+	description: "Portfolio of Burt Crismore, a design leader helping teams deliver thoughtful, effective solutions through systems that support how teams work. Explore featured work, career path, and recommendations."
+}
+
+// HERO SECTION //
+const heroContent = {
+	headline: "I'm a design leader helping teams deliver thoughtful, effective solutions",
+	lead: "I bring systems thinking to every stage of delivery, shaped by a background in product design, development, and quality.",
+	section: {
+		aria: "hero-banner",
+		spacing: "my-lg-1 md:my-lg-3 lg:my-lg-3",
+		grid: "lg:grid-col-12",
+		span: "lg:col-span-10 xl:col-span-8",
+	}
+}
+
+---
+
+<Base {seoContent}>
+
+	{/* HERO SECTION */}
+	<Hero content={heroContent} />
+
+
+	{/* INTRO SECTION */}
+	<Section class="section-space" aria="intro-section">
+		<ContentRow
+			grid="lg:grid-col-6-6"
+			spacing="content-row-gap"
+		>
+			<Column>
+				<ContentBlock
+					aria="intro-section"
+					heading="Systems that support how teams work"
+					headingTag="h2"
+				/>
+			</Column>
+			<Column class="last-p">
+				<ContentBlock
+					subheading="The foundation behind effective teams"
+				/>
+				<p>I create systems that bring clarity, consistency, and structure to how teams operate. Through documentation, tooling, workflows, or design systems, my work builds the operational foundation that helps teams stay aligned and move forward with confidence.</p>
+			</Column>
+
+		</ContentRow>
+	</Section>
+
+
+	{/* WORK SECTION */}
+	<Section class="section-space" aria="work-section">
+		<ContentRow
+			grid="lg:grid-col-5-6"
+			spacing="content-row-gap"
+		>
+			<Column class="order-last lg:order-none">
+				<ImageBlock
+					src={featuredWorkImg}
+					alt=""
+					class="support-image"
+				/>
+			</Column>
+			<Column class="column-gap-fill">
+				<ContentBlock
+					aria="work-section"
+					eyebrow="Featured work"
+					eyebrowTag="h2"
+					heading="How I put that into practice"
+					headingTag="p"
+				/>
+
+				<FeaturedWorkList
+					items={[
+						{
+							title: "Illumina Instrument Redesign",
+							href: "/work/illumina-instruments",
+							ariaLabel: "View Illumina Instrument Redesign",
+							description:
+							"Collaborated across design, development, and content teams to reimagine the instrument section of Illumina.com. The redesign simplified product comparison, improved navigation, and created a scalable foundation for future systems."
+						}
+					]}
+				/>
+
+
+				<ButtonGroup>
+					<Button 
+						label="Explore all work"
+						href="/work"
+						variant="tertiary"
+						icon="link"
+						iconPosition="right"
+					/>
+				</ButtonGroup>
+			</Column>
+		</ContentRow>
+	</Section>
+
+
+	{/* ABOUT SECTION */}
+	<Section class="section-space" aria="about-section">
+		<ContentRow
+			grid="lg:grid-col-6-5"
+			spacing="content-row-gap"
+		>
+			<Column class="column-gap-fill">
+				<ContentBlock
+					aria="about-section"
+					eyebrow="About me"
+					eyebrowTag="h2"
+					heading="What shapes how I lead and support teams"
+					headingTag="p"
+				/>
+				<p>I've worked across design, development, and delivery—and along the way—I've learned that good systems remove friction, not flexibility. Clear expectations, reliable processes, and thoughtful planning help teams stay aligned and do their best work. Whether I'm designing a product or shaping delivery, I focus on enabling people to solve problems, make decisions, and build with confidence.</p>
+				<ButtonGroup>
+					<Button 
+						label="More about me"
+						href="/about"
+						variant="tertiary"
+						icon="link"
+						iconPosition="right"
+					/>
+				</ButtonGroup>
+			</Column>
+			<Column>
+				<ImageBlock
+					src={aboutMeImg}
+					alt=""
+					class="support-image"
+				/>
+			</Column>
+		</ContentRow>
+	</Section>
+
+
+	{/* RECOMMENDATIONS SECTION */}
+	<Section class="section-space section-row-gap" aria="recommendations-section">
+		<ContentRow
+			grid="lg:grid-col-6-6"
+			spacing="content-row-gap"
+		>
+			<Column>
+				<ContentBlock
+					aria="recommendations-section"
+					eyebrow="Recommendations"
+					eyebrowTag="h2"
+					heading="What it's like to work with me"
+					headingTag="p"
+				/>
+			</Column>
+			<Column>
+				<ContentBlock
+					lead="Design and operations are just part of the work. Building strong relationships is what makes it successful. Here's what others have shared about working together."
+				/>
+			</Column>
+		</ContentRow>
+		<CardRow
+			content={recommendations}
+			columns="sm:grid-col-2 lg:grid-col-3"
+			gap="g-md-3"
+			shuffle={true}
+			count={3}
+		/>
+		<!-- <CardRow
+			content={recommendations}
+			ids={["ken", "frank", "robert"]}
+			columns="sm:grid-col-2 md:grid-col-3"
+			gap="g-md-3"
+		/> -->
+	</Section>
+
+</Base>

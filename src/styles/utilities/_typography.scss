@@ -1,0 +1,78 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/utilities/utilities-semantic" as *;
+@use "@styles/functions/token-prefix" as *;
+
+/*
+=================================================
+Typography
+================================================= 
+*/
+$type-styles-map: (
+	"display-1": (
+		"font-size": token(type-size-display-1),
+		"font-weight": token(type-weight-display-1),
+		"line-height": token(type-leading-display-1)
+	),
+	"display-2": (
+		"font-size": token(type-size-display-2),
+		"font-weight": token(type-weight-display-2),
+		"line-height": token(type-leading-display-2)
+	),
+	"headline": (
+		"font-size": token(type-size-headline),
+		"font-weight": token(type-weight-headline),
+		"line-height": token(type-leading-headline)
+	),
+	"heading": (
+		"font-size": token(type-size-heading),
+		"font-weight": token(type-weight-heading),
+		"line-height": token(type-leading-heading)
+	),
+	"subheading": (
+		"font-size": token(type-size-subheading),
+		"font-weight": token(type-weight-subheading),
+		"line-height": token(type-leading-subheading),
+		// "margin-bottom": token(space-xs-5),
+	),
+	"sideheading": (
+		"font-size": token(type-size-sideheading),
+		"font-weight": token(type-weight-sideheading),
+		"line-height": token(type-leading-sideheading)
+	),
+	"lead": (
+		"font-size": token(type-size-lead),
+		"font-weight": token(type-weight-lead),
+		"line-height": token(type-leading-lead)
+	),
+	"eyebrow": (
+		"font-size": token(type-size-eyebrow),
+		"font-weight": token(type-weight-eyebrow),
+		"line-height": token(type-leading-eyebrow),
+		// "margin-bottom": token(space-xs-5),
+		"text-transform": uppercase,
+		"color": token(color-content-subtle)
+	),
+	"caption": (
+		"font-size": token(type-size-caption),
+		"font-weight": token(type-weight-caption),
+		"line-height": token(type-leading-caption)
+	),
+	"fine": (
+		"font-size": token(type-size-fine),
+		"font-weight": token(type-weight-fine),
+		"line-height": token(type-leading-fine)
+	),
+	"chip": (
+		"font-size": token(type-size-chip),
+		"font-weight": token(type-weight-chip),
+		"line-height": token(type-leading-chip),
+		"text-transform": uppercase
+	)
+);
+
+@include utilities-semantic($breakpoint-delimiter, $type-styles-map, $breakpoints);

@@ -1,0 +1,41 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/utilities/utilities-grid" as *;
+
+/*
+=================================================
+Grid
+================================================= 
+*/
+$grid-split-map: (
+	"1fr 11fr": "1-11",
+	"2fr 10fr": "2-10",
+	"3fr 9fr":  "3-9",
+	"4fr 8fr":  "4-8",
+	"5fr 6fr":  "5-6",
+	"5fr 7fr":  "5-7",
+	"6fr 6fr":  "6-6",
+	"7fr 5fr":  "7-5",
+	"6fr 5fr":  "6-5",
+	"8fr 4fr":  "8-4",
+	"9fr 3fr":  "9-3",
+	"10fr 2fr": "10-2",
+	"11fr 1fr": "11-1"
+);
+
+
+@include utilities-grid-columns($breakpoint-delimiter, "grid-col", $grid-columns, $breakpoints);
+@include utilities-grid-rows($breakpoint-delimiter, "grid-row", $grid-rows, $breakpoints);
+
+@include utilities-grid-columns-split($breakpoint-delimiter, "grid-col",$grid-split-map, $breakpoints);
+@include utilities-grid-rows-split($breakpoint-delimiter, "grid-row", $grid-split-map, $breakpoints);
+
+@include utilities-grid-col-span($breakpoint-delimiter, "col-span", $grid-columns, $breakpoints);
+@include utilities-grid-row-span($breakpoint-delimiter, "row-span", $grid-rows, $breakpoints);
+
+@include utilities-grid-col-start-end($breakpoint-delimiter, "col-start", "col-end", $grid-columns, $breakpoints);
+@include utilities-grid-row-start-end($breakpoint-delimiter, "row-start", "row-end", $grid-columns, $breakpoints);

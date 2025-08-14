@@ -1,0 +1,63 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@styles/functions/token-prefix" as *;
+@use "@tools/mixins/layout/breakpoint" as *;
+
+/*
+=================================================
+Listings
+================================================= 
+*/
+.test-case {
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__tags {
+		margin-bottom: token(space-sm-3);
+		display: flex;
+		gap: token(space-sm-3);
+
+		&-label {
+			color: token(color-content-inverse);
+			background: token(color-surface-strong);
+			padding: token(space-xs-2) token(space-xs-3);
+		}
+	}
+
+	&__image {
+		background: token(color-surface-subtle);
+	}
+
+	&__link {
+		text-decoration: none;
+		position: relative;
+		background: token(color-surface-subtle);
+
+		@include breakpoint("sm", $breakpoints) {
+			margin-left: 30px;
+		}
+
+		&-indicator {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			font-size: 3rem;
+			background: token(color-surface-brand);
+			padding: token(space-xs-1) token(space-sm-2);
+			color: token(color-content-inverse);
+
+			@include breakpoint("sm", $breakpoints) {
+				left: -29px;
+			}
+		}
+	}
+}

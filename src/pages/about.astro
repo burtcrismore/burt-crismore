@@ -1,0 +1,301 @@
+---
+import Base from "src/layouts/Base.astro";
+import Hero from "@layoutFoundation/Hero.astro";
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import ImageBlock from "@layoutFoundation/ImageBlock.astro";
+import CardRow from "@layoutFoundation/CardRow.astro";
+import recommendations from "src/data/recommendations";
+import myPrinciplesImg from "@images/arrows.png";
+import headshotImg from "@images/headshot.jpg";
+import myHobbiesImg from "@images/my-hobbies.jpg";
+import CompanyIcons from "@layoutFoundation/CompanyIcons.astro";
+
+const seoContent = {
+	title: "About Burt Crismore | Building Systems for Design & Delivery",
+	description: "Learn how Burt Crismore builds systems that support design and elevate delivery. Explore philosophy, guiding principles, skills, and the approach that helps teams move forward."
+}
+
+// HERO SECTION //
+const heroContent = {
+	headline: "I build systems that support design and elevate delivery",
+	lead: "A closer look at how I lead, collaborate, and create impact.",
+	section: {
+		aria: "hero-banner",
+		spacing: "my-lg-1 md:my-lg-3 lg:my-lg-3",
+		grid: "lg:grid-col-12",
+		span: "lg:col-span-10 xl:col-span-8",
+	}
+}
+---
+
+<Base {seoContent}>
+
+	{/* HERO SECTION */}
+	<Hero content={heroContent} />
+
+
+	{/* PHILOSOPHY SECTION */}
+	<Section class="section-space section-row-gap" aria="philosophy-section">
+		<ContentRow
+			grid="lg:grid-col-6-5"
+			spacing="content-row-gap" 
+		>
+			<Column class="column-gap-fill">
+				<ContentBlock
+					aria="philosophy-section"
+					eyebrow="My philosophy"
+					eyebrowTag="h2"
+					heading="How I think, lead, and help teams move forward"
+					headingTag="p"
+					lead="I'm a design leader specializing in DesignOps and design systems—helping teams move forward with clarity, alignment, and momentum."
+				/>
+			</Column>
+			<Column class="order-first lg:order-none">
+				<ImageBlock
+					src={headshotImg}
+					alt="Portrait of Burt Crismore"
+					class="support-image"
+				/>
+			</Column>
+		</ContentRow>
+
+		<ContentRow
+			grid="lg:grid-col-3"
+			spacing="g-md-1 lg:g-md-5"
+		>
+			<Column class="last-p">
+				<ContentBlock
+					subheading="How I got here"
+				/>
+				<p>I began my career in design and gradually expanded into front-end development, which gave me a deeper understanding of how ideas move from concept to reality. Over time, I was drawn to the systems behind the work—the workflows, tools, and decisions that shape how teams operate. That shift led me to design operations, where I help teams move with more clarity and confidence.</p>
+			</Column>
+			<Column class="last-p">
+				<ContentBlock
+					subheading="How I approach the work"
+				/>
+				<p>My approach centers on reducing ambiguity and making complexity manageable. Whether I'm designing an experience or leading an operational effort, I look for patterns, ask the right questions, and build frameworks that support momentum. It's not just about finishing the work—it's about making the process more thoughtful, collaborative, and effective for everyone involved.</p>
+			</Column>
+			<Column class="last-p">
+				<ContentBlock
+					subheading="What I aim to create"
+				/>
+				<p>The best work happens when people feel clear, connected, and trusted. I lead by communicating openly, planning ahead, and staying adaptable when things shift. My role is often part designer, part facilitator, part problem-solver—always focused on helping teams move forward with confidence and less friction.</p>
+			</Column>
+		</ContentRow>
+	</Section>
+
+
+	{/* PRINCIPLES SECTION */}
+	<Section class="section-space section-row-gap" aria="principles-section">
+		<ContentRow
+			grid="lg:grid-col-5-6"
+			spacing="content-row-gap" 
+		>
+			<Column class="order-last lg:order-none">
+				<ImageBlock
+					src={myPrinciplesImg}
+					alt=""
+					class="support-image"
+				/>
+			</Column>
+			<Column class="column-gap-fill">
+				<ContentBlock
+					aria="principles-section"
+					eyebrow="My principles"
+					eyebrowTag="h2"
+					heading="What guides my work and the way I show up"
+					headingTag="p"
+					lead="These principles shape how I approach challenges, support teams, and contribute to meaningful outcomes. They reflect not just what I do, but how I show up—intentionally, collaboratively, and with care."
+				/>
+				<!-- <ButtonGroup>
+					<Button 
+						label="View my CliftonStrengths"
+						href="#"
+						variant="tertiary"
+						icon="link"
+						iconPosition="right"
+					/>
+				</ButtonGroup> -->
+			</Column>
+		</ContentRow>
+
+		<ContentRow
+			grid="md:grid-col-2 lg:grid-col-4"
+			spacing="g-md-1 lg:g-md-5"
+		>
+			<Column class="last-p">
+				<ContentBlock
+					display1="01"
+					subheading="Anticipate"
+				/>
+				<p>I look ahead to identify risks, remove blockers, and prevent small problems from becoming big ones.</p>
+			</Column>
+			<Column class="last-p">
+				<ContentBlock
+					display1="02"
+					subheading="Support others"
+				/>
+				<p>I help others do their best work by creating clarity, reducing stress, and offering thoughtful guidance.</p>
+			</Column>
+			<Column class="last-p">
+				<ContentBlock
+					display1="03"
+					subheading="Build trust"
+				/>
+				<p>I lead with integrity, listen closely, and create a space where people feel safe to contribute and collaborate.</p>
+			</Column>
+			<Column class="last-p">
+				<ContentBlock
+					display1="04"
+					subheading="Deliver with care"
+				/>
+				<p>I take ownership of outcomes and hold a high bar for quality, because how we work matters just as much as what we ship.</p>
+			</Column>
+		</ContentRow>
+	</Section>
+
+
+	{/* SKILLSET SECTION */}
+	<Section class="section-space section-row-gap" aria="skillset-section">
+		<ContentRow
+			grid="lg:grid-col-12"
+		>
+			<Column class="lg:col-span-8">
+				<ContentBlock
+					aria="skillset-section"
+					eyebrow="My skillset"
+					eyebrowTag="h2"
+					heading="The tools and disciplines I work across"
+					headingTag="p"
+				/>
+			</Column>
+		</ContentRow>
+
+		<ContentRow
+			grid="lg:grid-col-2"
+			spacing="gy-md-5 lg:gx-xl-5 lg:gy-lg-3"
+		>
+			<Column>
+				<ContentBlock
+					subheading="Project & Workflow"
+				/>
+				<p>Planning, task management, and team coordination.</p>
+				<CompanyIcons
+					tools={["Jira", "Workfront", "MS 365", "Miro"]}
+				/>
+			</Column>
+			<Column>
+				<ContentBlock
+					subheading="Design & Prototyping"
+				/>
+				<p>UI/UX design, visual assets, and design system tooling.</p>
+				<CompanyIcons
+					tools={["Figma", "Adobe", "Zeroheight"]}
+				/>
+			</Column>
+			<Column>
+				<ContentBlock
+					subheading="Development & Code"
+				/>
+				<p>Front-end languages and platforms used to build digital products.</p>
+				<CompanyIcons
+					tools={["HTML", "CSS", "JavaScript", "GitHub"]}
+				/>
+
+			</Column>
+			<Column>
+				<ContentBlock
+					subheading="Documentation & Sharing"
+				/>
+				<p>Storing, organizing, and sharing information and system knowledge.</p>
+				<CompanyIcons
+					tools={["Confluence", "Obsidian", "Notion"]}
+				/>
+			</Column>
+			<Column>
+				<ContentBlock
+					subheading="Testing & Quality"
+				/>
+				<p>Testing functionality, accessibility, and user experience.</p>
+				<CompanyIcons
+					tools={["Cypress", "BrowserStack", "Axe", "UserZoom"]}
+				/>
+			</Column>
+		</ContentRow>
+
+		<ContentRow
+			grid="lg:grid-col-2"
+		>
+			<Column>
+				<p class="fine m-0">*Don't see a tool you work with? This is a short list. I've worked with many applications and languages—and if I haven't—I'm happy to learn another.</p>
+			</Column>
+		</ContentRow>
+	</Section>
+
+	
+	{/* HOBBIES SECTION */}
+	<Section class="section-space section-row-gap" aria="hobbies-section">
+		<ContentRow
+			grid="lg:grid-col-6-5"
+			spacing="content-row-gap"
+		>
+			<Column class="order-last lg:order-none">
+				<ImageBlock
+					src={myHobbiesImg}
+					alt="Landscape of Cathedral Rock in Arizona"
+					class="support-image"
+				/>
+			</Column>
+			<Column class="column-gap-fill">
+				<ContentBlock
+					aria="hobbies-section"
+					eyebrow="My hobbies"
+					eyebrowTag="h2"
+					heading="What keeps me grounded and curious beyond the work"
+					headingTag="p"
+				/>
+				<p class="m-0">When I'm not working, I spend a lot of time outdoors—usually hiking, photographing landscapes, or capturing the night sky. I'm drawn to quiet places and small details, which is probably why I find so much value in structure, observation, and working with intent. Whether I'm building a system or framing a shot, I'm always looking for clarity.</p>
+			</Column>
+		</ContentRow>
+	</Section>
+
+
+	{/* RECOMMENDATIONS SECTION */}
+	<Section class="section-space section-row-gap" aria="recommendations-section">
+		<ContentRow
+			grid="lg:grid-col-6-6"
+			spacing="content-row-gap"
+		>
+			<Column>
+				<ContentBlock
+					aria="recommendations-section"
+					eyebrow="Recommendations"
+					eyebrowTag="h2"
+					heading="What it's like to work with me"
+					headingTag="p"
+				/>
+			</Column>
+			<Column>
+				<ContentBlock
+					lead="Design and operations are just part of the work. Building strong relationships is what makes it successful. Here's what others have shared about working together."
+				/>
+			</Column>
+		</ContentRow>
+		<CardRow
+			content={recommendations}
+			columns="sm:grid-col-2 md:grid-col-3"
+			gap="g-md-3"
+			shuffle={true}
+			count={3}
+		/>
+		<!-- <CardRow
+			content={recommendations}
+			ids={["ken", "frank", "robert"]}
+			columns="sm:grid-col-2 md:grid-col-3"
+			gap="g-md-3"
+		/> -->
+	</Section>
+</Base>

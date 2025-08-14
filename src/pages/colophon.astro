@@ -1,0 +1,123 @@
+---
+import Base from "src/layouts/Base.astro";
+import Hero from "@layoutFoundation/Hero.astro";
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import PageNav from "src/layouts/landmarks/PageNav.astro";
+
+const seoContent = {
+	title: "Colophon | Burt Crismore Portfolio",
+	description: "Learn about the tools, technologies, and design approach behind Burt Crismore’s portfolio. Explore the framework, typography, and processes used to build the site."
+}
+
+// HERO SECTION //
+const heroContent = {
+	headline: "Colophon",
+	lead: "This site is equal parts portfolio, playground, and proof that simple can still be beautiful. Here's what's under the hood.",
+	section: {
+		aria: "hero-banner",
+		spacing: "my-lg-1 md:my-lg-3 lg:my-lg-3",
+		grid: "lg:grid-col-12",
+		span: "lg:col-span-10 xl:col-span-8",
+	}
+}
+
+---
+
+<Base {seoContent}>
+
+	{/* HERO SECTION */}
+	<Hero content={heroContent} />
+
+	<ContentRow
+		grid="lg:grid-col-9-3"
+		spacing="lg:g-lg-5"
+	>
+
+	<Column>
+
+		{/* PURPOSE SECTION */}
+		<Section class="section-space-colophon column-gap-fill last-p" aria="purpose-section">
+			<ContentBlock
+				aria="purpose-section"
+				headingAlt="Purpose"
+			/>
+			<p>A space to share my work, ideas, and experiments in design systems and digital operations. It's also where I tinker — testing new tools, refining workflows, and occasionally breaking things to see how they work.</p>
+		</Section>
+
+		{/* DESIGN & BUILD SECTION */}
+		<Section class="section-space-colophon column-gap-fill last-p" aria="design-section">
+			<ContentBlock
+				aria="design-section"
+				headingAlt="Design and build"
+			/>
+			<p>Designed and coded by me with a focus on clarity, speed, and accessibility. No page builders. No heavy themes. Just a lean, flexible framework built to adapt as I do.</p>
+		</Section>
+		
+		{/* TECH STACK SECTION */}
+		<Section class="section-space-colophon column-gap-fill last-p" aria="tech-section">
+			<ContentBlock
+				aria="tech-section"
+				headingAlt="Tech stack"
+			/>
+			<ul class="m-0 pl-md-3">
+				<li><a href="https://astro.build/" target="_blank">Astro</a> for static site generation.</li>
+				<li>Helium UI for for components and style. This is a headless framework that I'm currently developing and using. (site coming soon)</li>
+				<li>Hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a> for static site generation</li>
+				<li>Version controlled with <a href="https://github.com/" target="_blank">GitHub</a>.</li>
+			</ul>
+		</Section>
+
+		{/* TYPOGRAPHY SECTION */}
+		<Section class="section-space-colophon column-gap-fill last-p" aria="typography-section">
+			<ContentBlock
+				aria="typography-section"
+				headingAlt="Typography"
+			/>
+			<p>Headings and body text in <a href="https://fonts.google.com/specimen/Figtree" target="_blank">Figtree</a>. Chosen for clean readability, served locally for performance.</p>
+		</Section>
+
+		{/* PERFORMANCE & ACCESSIBILITY SECTION */}
+		<Section class="section-space-colophon column-gap-fill last-p" aria="performance-section">
+			<ContentBlock
+				aria="performance-section"
+				headingAlt="Performance and accessibility"
+			/>
+			<p>Lightweight, responsive, and built to meet WCAG 2.1 AA guidelines. Images are compressed, code is minimal, and every page aims to load in under a second.</p>
+		</Section>
+
+		{/* A LIVING PAGE SECTION */}
+		<Section class="section-space column-gap-fill last-p" aria="living-page-section">
+			<ContentBlock
+				aria="living-page-section"
+				headingAlt="A living page"
+			/>
+			<p>As the site evolves, so will this colophon. Check back if you care about the nerdy details — or just trust that I'm always making it better.</p>
+		</Section>
+
+
+	</Column>
+
+	<Column class="order-first lg:order-none">
+
+		<PageNav
+			offset={38}
+			items={[
+				{ id: 'purpose-section', label: 'Purpose' },
+				{ id: 'design-section', label: 'Design and build' },
+				{ id: 'tech-section', label: 'Tech stack' },
+				{ id: 'typography-section', label: 'Typography' },
+				{ id: 'performance', label: 'Performance and accessibility' },
+				{ id: 'living-page-section', label: 'A living page' }
+			]}
+		/>
+
+	</Column>
+
+	</ContentRow>
+
+	
+
+</Base>

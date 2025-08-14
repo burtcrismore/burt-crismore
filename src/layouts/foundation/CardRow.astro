@@ -1,0 +1,48 @@
+---
+import Card from "src/components/Card.astro";
+
+const {
+  content = [],
+  shuffle = false,
+  ids = [],
+  columns,
+  gap,
+  class: className
+} = Astro.props;
+
+const count = Astro.props.count ?? content.length;
+
+function getByIds(array: any, ids: any) {
+  const map = new Map(array.map((item: any) => [item.id, item]));
+  return ids.map((id: any) => map.get(id)).filter(Boolean);
+}
+
+let cards = content;
+const shouldShuffle = shuffle && ids.length === 0;
+
+if (ids.length > 0) {
+  cards = getByIds(content, ids);
+} else {
+  cards = content;
+}
+
+const wrapperClass = ["card-row", className].filter(Boolean).join(" ");
+const gridClass = ["grid", columns, gap, "card-row__list"].filter(Boolean).join(" ");
+---
+<div class="container">
+  <div 
+    class={wrapperClass}
+    data-card-row={shouldShuffle ? "true" : undefined}
+    data-count={shouldShuffle ? String(count) : undefined}
+  >
+    <ul class={gridClass}>
+      {cards.map((card: any) => (
+        <li class="card-row__item">
+          <Card content={card} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<script src="@scripts/utils/shuffleCards.js"></script>

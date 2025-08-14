@@ -1,0 +1,79 @@
+---
+import Base from "src/layouts/Base.astro";
+import Hero from "@layoutFoundation/Hero.astro";
+import TestCaseList from "src/layouts/listings/TestCaseList.astro";
+
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import instrumentsImg from "@images/test-case/instruments/illumina-instruments.png";
+
+const seoContent = {
+	title: "Work | Burt Crismore - Design Systems & Digital Operations",
+	description: "See Burt Crismore's work creating design systems and digital operations that build clarity, alignment, and momentum. Explore case studies and the approach behind each project."
+}
+
+// HERO SECTION //
+const heroContent = {
+	headline: "Work that builds clarity, alignment, and momentum",
+	lead: "A look at the systems, experiences, and outcomes I've helped create—spanning product design and design operations.",
+	section: {
+		aria: "hero-banner",
+		spacing: "my-lg-1 md:my-lg-3 lg:my-lg-3",
+		grid: "lg:grid-col-12",
+		span: "lg:col-span-10 xl:col-span-8",
+	}
+}
+
+// TEST CASES //
+const testCases = [
+	{
+		tags: ["Product Design"],
+		subheading: "Illumina Instrument Redesign",
+		description: "Redesigned a key content section to improve clarity, usability, and alignment with user goals during the testing decision process.",
+		image: instrumentsImg,
+		link: "/work/illumina-instruments",
+		alt: "Web browser showing snapshots of the redesign"
+	},
+	// {
+	// 	tags: ["Product Design"],
+	// 	subheading: "Illumina Reproductive Genetic Health Redesign",
+	// 	description: "Redesigned a key content section to improve clarity, usability, and alignment with user goals during the testing decision process.",
+	// 	image: "src/images/test-case/rgh/illumina-rgh.jpg",
+	// 	link: "/work/rgh-redesign",
+	// },
+];
+---
+
+<Base {seoContent}>
+
+	{/* HERO SECTION */}
+	<Hero content={heroContent} />
+
+	{/* INTRO SECTION */}
+	<Section class="section-space section-row-gap" aria="intro-section">
+		<ContentRow
+			grid="lg:grid-col-6-6"
+			spacing="content-row-gap"
+		>
+			<Column>
+				<ContentBlock
+					aria="intro-section"
+					heading="How I shape the work and support better design and delivery"
+					headingTag="h2"
+				/>
+			</Column>
+			<Column>
+				<ContentBlock
+					lead="My work bridges product design and design operations to create thoughtful experiences and make delivery smoother."
+				/>
+			</Column>
+		</ContentRow>
+
+		<TestCaseList
+			content={testCases}
+		/>
+	</Section>
+
+</Base>

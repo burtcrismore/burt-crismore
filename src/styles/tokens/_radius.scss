@@ -1,0 +1,34 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/tokens/tokens-radius" as *;
+
+/*
+=================================================
+Tokens
+================================================= 
+*/
+$token-radius-base: (
+  "0": 0,
+  "100": 4,
+  "200": 8,
+  "300": 12,
+  "400": 16,
+  "500": 9999 // full (pill)
+);
+
+$token-radius-alias: (
+  "0": "0",
+  "sm": "100",
+  "md": "200",
+  "lg": "300",
+  "xl": "400",
+  "full": "500"
+);
+
+$token-radius-name: "radius";
+
+@include tokens-radius($prefix, $token-radius-name, $token-radius-base, $token-radius-alias);

@@ -1,0 +1,27 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/tokens/tokens-elevation" as *;
+
+/*
+=================================================
+Tokens
+================================================= 
+*/
+$token-elevation-light: (
+	"low": 0 1px 2px hsla(220, 20%, 5%, 0.05),
+	"medium": 0 2px 4px hsla(220, 20%, 5%, 0.08),
+	"high": 0 4px 8px hsla(220, 20%, 5%, 0.1)
+);
+$token-elevation-dark: (
+	"low": 0 1px 2px hsla(220, 20%, 5%, 0.15),
+	"medium": 0 2px 4px hsla(220, 20%, 5%, 0.18),
+	"high": 0 4px 8px hsla(220, 20%, 5%, 0.2)
+);
+
+$token-elevation-name: "elevation";
+
+@include tokens-elevation($prefix, $token-elevation-name, $token-elevation-light, $token-elevation-dark);

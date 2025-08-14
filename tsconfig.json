@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@tools/*": ["./node_modules/@burtcrismore/helium-ui/tools/*"],
+      "@styles/*": ["src/styles/*"],
+      "@scripts/*": ["src/scripts/*"],
+      "@layoutFoundation/*": ["src/layouts/foundation/*"],
+      "@images/*": ["src/images/*"],
+    }
+  }
+}

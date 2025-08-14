@@ -1,0 +1,23 @@
+---
+const { content } = Astro.props;
+---
+
+<article class="card card--recommendation" tabindex="0">
+	<a 
+		class="card__quote-icon" 
+		href={content.link.url} 
+		target={content.link.target} 
+		aria-label="View more recommendations on LinkedIn" 
+		rel="me">
+		<i class="fa-sharp fa-solid fa-quote-left" aria-hidden="true"></i>
+	</a>
+
+	{content.quote && <p class="card__quote">“{content.quote}”</p>}
+
+	{content.person && (
+		<div class="card__person">
+			<span class="card__link-label">{content.person}</span>
+			{content.title && <div class="card__person-title">{content.title}</div>}
+		</div>
+	)}
+</article>

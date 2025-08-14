@@ -1,0 +1,28 @@
+---
+const { content } = Astro.props;
+---
+
+<article class="card card--default" tabindex="0">
+	{content.image && 
+		<img src={content.image.src} alt={content.image.alt} class="card__image image-fluid" />
+	}
+	<div class="card__content">
+		<!-- {tag && <span class="card__tag">{tag}</span>} -->
+		<!-- {eyebrow && <span class="card__tag">{eyebrow}</span>} -->
+		{content.heading && 
+			<h3 class="card__heading subheading">
+				{content.link && (
+					<a class="card__link" href={content.link.url} target={content.link.target} tabindex="-1">
+						{content.heading}
+					</a>
+				)}
+			</h3>
+		}
+		{content.description && 
+	 		<p class="card__desc">{content.description}</p>
+		}
+		{content.cta && 
+			<span>{content.cta}</span>
+		}
+  </div>
+</article>

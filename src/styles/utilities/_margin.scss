@@ -1,0 +1,25 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@styles/tokens/space" as *;
+@use "@tools/mixins/utilities/utilities-space" as *;
+
+/*
+=================================================
+Margin
+================================================= 
+*/
+$margin-map: (
+	"margin": m,
+	"margin-top": mt,
+	"margin-bottom": mb,
+	"margin-left": ml,
+	"margin-right": mr,
+	(margin-left, margin-right): mx,
+	(margin-top, margin-bottom): my
+);
+
+@include utilities-space($prefix, $breakpoint-delimiter, $token-space-name, $margin-map, $token-space-alias, $breakpoints);

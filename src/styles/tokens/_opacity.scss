@@ -1,0 +1,23 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/tokens/tokens-opacity" as *;
+
+/*
+=================================================
+Tokens
+================================================= 
+*/
+$token-opacity: (
+  "disabled": 0.38,
+  "muted": 0.6,
+  "overlay": 0.8,
+  "active": 1
+);
+
+$token-opacity-name: "opacity";
+
+@include tokens-opacity($prefix, $token-opacity-name, $token-opacity);

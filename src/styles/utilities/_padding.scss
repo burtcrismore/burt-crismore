@@ -1,0 +1,25 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@styles/tokens/space" as *;
+@use "@tools/mixins/utilities/utilities-space" as *;
+
+/*
+=================================================
+Padding
+================================================= 
+*/
+$padding-map: (
+	"padding": p,
+	"padding-top": pt,
+	"padding-bottom": pb,
+	"padding-left": pl,
+	"padding-right": pr,
+	(padding-left, padding-right): px,
+	(padding-top, padding-bottom): py
+);
+
+@include utilities-space($prefix, $breakpoint-delimiter, $token-space-name, $padding-map, $token-space-alias, $breakpoints);

@@ -1,0 +1,41 @@
+---
+import Button from "src/components/Button.astro";
+import Break from "src/components/Break.astro";
+import FooterNav from "./FooterNav.astro";
+---
+<footer class="footer mb-md-2 sm:mb-md-5">
+
+	<Break position="end" />
+
+	<div class="container">
+		<div class="footer__content my-md-4">
+			<div class="grid md:grid-col-2 g-md-1">
+				<div class="footer__cta">
+					<h2 class="headline headline__hr mb-md-5">Let's work together</h2>
+					<Button 
+						label="Connect on LinkedIn"
+						href="https://www.linkedin.com/in/burtcrismore/"
+						target="_blank"
+						ariaDescribedby="open-linkedin-link"
+						description="Click link to open in new tab and navigate to LinkedIn.com."
+						icon="linkedIn"
+						iconPosition="right"
+					/>
+				</div>
+
+				<FooterNav />
+
+			</div>
+		</div>
+		<div class="footer__notice">
+			<div class="grid md:grid-col-2 g-xs-2 md:g-md-1">
+				<div class="footer__copyright">
+					<p>© 2025 Burt Crismore | All rights reserved.</p>
+				</div>
+				<div class="footer__sign-off">
+					<p>Crafted in San Diego | <a href="/colophon">Colophon</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

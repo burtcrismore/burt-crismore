@@ -1,0 +1,58 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/utilities/utilities-space" as *;
+@use "@styles/functions/token-prefix" as *;
+@use "@tools/mixins/layout/breakpoint" as *;
+
+/*
+=================================================
+Spacing
+================================================= 
+*/
+$spacing-styles-map: (
+  section-space: (
+    margin-bottom: (
+      base: token(space-lg-1),
+      md: token(space-lg-3),
+      lg: token(space-xl-1),
+    )       
+  ),
+  section-space-colophon: (
+    margin-bottom: (
+      base: token(space-md-1),
+      md: token(space-md-3),
+      lg: token(space-lg-1),
+    )       
+  ),
+  section-row-gap: (
+    gap: (
+      base: token(space-md-3),
+      md: token(space-md-4),
+      lg: token(space-md-5),
+    )
+  ),
+  content-row-gap: (
+    gap: (
+      base: token(space-md-2),
+      md: token(space-md-3),
+      lg: token(space-xl-5)
+    )
+  ),
+);
+
+.last-p > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.column-gap-fill .headline {
+  margin-bottom: token(space-md-2);
+    @include breakpoint("md", $breakpoints) {
+      margin-bottom: token(space-md-3);
+    }
+}
+
+@include utilities-space-styles($spacing-styles-map, $breakpoints);

@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+const {
+  src,
+  alt = "",
+  class: className,
+  quality = "mid"
+} = Astro.props;
+
+// Fixed widths (covers DPR 1 and 2 use cases reasonably)
+const widths = [480, 640, 800, src.width];
+
+// Simple responsive sizes string
+const sizes = `(max-width: 576px) 640px, (max-width: 768px) 800px, (max-width: 1024px) 480px, ${src.width}`;
+
+const finalClass = ["image-fluid", className].filter(Boolean).join(" ");
+---
+
+<Image
+  src={src}
+  alt={alt}
+  class={finalClass}
+  widths={widths}
+  sizes={sizes}
+  format="webp"
+  quality={quality}
+/>

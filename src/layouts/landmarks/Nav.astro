@@ -1,0 +1,46 @@
+---
+import headerNav from "src/data/headerNav";
+const currentPath = Astro.url.pathname;
+
+---
+
+<nav class="header-nav" aria-label="Header">
+	<div class="header-nav__container">
+		<div class="header-nav__brand">
+			<a href="/" class="header-nav__brand-link">
+				<div class="header-nav__brand-mark">
+					<svg class="header-nav__brand-mark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" aria-label="Burt Crismore logo">
+						<defs>
+						</defs>
+						<path class="header-nav__brand-mark-path" d="M34.72,26.39h-11.11v-2.78h11.11v-8.33H15.28v19.44h19.44v-8.33ZM31.94,31.94h-13.89v-13.89h13.89v2.78h-11.11v8.33h11.11v2.78Z"/>
+						<path class="header-nav__brand-mark-path" d="M0,0v50h50V0H0ZM37.5,15.28v22.22H12.5V12.5h25v2.78Z"/>
+					</svg>
+					<span class="header-nav__brand-mark-bg"></span>
+				</div>
+				<span class="header-nav__brand-type">Burt Crismore</span>
+			</a>
+		</div>
+		<div class="header-nav__content">
+			<ul class="header-nav__list">
+				{headerNav.map(nav => (
+					<li class="header-nav__item">
+						<a 
+							href={nav.href} 
+							class="header-nav__link" 
+							target={nav.target}
+							aria-current={nav.href === currentPath ? "page" : false}>{nav.label}
+						</a>
+					</li>
+				))}
+			</ul>
+			<!-- <div class="header-nav__control">
+				<button id="theme-toggle" class="header-nav__theme-switcher">
+					<div class="icon-sun"><i class="fa-sharp fa-solid fa-sun-bright"></i></div>
+					<div class="icon-moon none"><i class="fa-sharp fa-solid fa-moon"></i></div>
+				</button>
+			</div> -->
+		</div>
+	</div>
+</nav>
+
+<!-- <script src="@scripts/components/themeToggle.js"></script> -->

@@ -1,0 +1,23 @@
+---
+import footerNav from "src/data/footerNav.js";
+---
+
+<nav class="footer-nav" aria-label="Footer">
+	{footerNav.map(group => (
+		<ul class="footer-nav__group">
+		<li class="footer-nav__title">{group.title}</li>
+		{group.links.map(link => (
+			<li class="footer-nav__item">
+				<a
+				class="footer-nav__link"
+				href={link.href}
+				target={"target" in link ? link.target : undefined}
+				rel={"rel" in link ? link.rel : undefined}
+				>
+				{link.label}
+				</a>
+			</li>
+		))}
+		</ul>
+	))}
+</nav>

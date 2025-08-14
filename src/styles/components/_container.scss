@@ -1,0 +1,14 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/layout/container" as *;
+
+/*
+=================================================
+Container
+================================================= 
+*/
+@include container($container-padding, $container-widths, $breakpoints);

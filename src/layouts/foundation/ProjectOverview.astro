@@ -1,0 +1,14 @@
+---
+const { data = [] } = Astro.props;
+---
+
+<div class="project-overview grid grid-col-2 g-md-3">
+	{data.map((block: any) => (
+		<div class="project-overview__block">
+			<h3 class="project-overview__heading mb-xs-5">{block.heading}</h3>
+			<p class="project-overview__items m-0">
+				{block.items.join(", ")}
+			</p>
+		</div>
+	))}
+</div>

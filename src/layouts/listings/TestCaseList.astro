@@ -1,0 +1,35 @@
+---
+import "@styles/components/_image.scss";
+import ImageBlock from "@layoutFoundation/ImageBlock.astro";
+const { content = [] } = Astro.props;
+---
+
+<div class="container">
+	<div class="test-case">
+		<ul class="test-case__list">
+			{content.map((item: any) => (
+				<li class="test-case__item grid lg:grid-col-4-8 g-md-5 lg:g-xl-5 mb-lg-3 lg:mb-xl-5 mt-0">
+					<div class="test-case__content">
+						<div class="test-case__tags">
+							{item.tags && item.tags.map((tag: any) => (
+								<span class="test-case__tags-label chip">{tag}</span>
+							))}
+						</div>
+						{item.subheading && <h3 class="subheading">{item.subheading}</h3>}
+						{item.description && <p class="m-0">{item.description}</p>}
+					</div>
+
+					<a href={item.link} class="test-case__link">
+						<span class="test-case__link-indicator"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>
+
+						<ImageBlock
+							src={item.image}
+							alt={item.alt || item.subheading}
+							class="test-case__image"
+						/>
+					</a>
+				</li>
+			))}
+		</ul>
+	</div>
+</div>

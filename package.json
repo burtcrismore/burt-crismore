@@ -1,0 +1,22 @@
+{
+  "name": "burt-crismore",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "My personal website showcasing desing, development, and operations.",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@burtcrismore/helium-ui": "^0.5.0",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.0",
+    "sass": "^1.90.0"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.3",
+    "astro": "^5.12.9"
+  }
+}

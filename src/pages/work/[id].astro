@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from 'src/layouts/Base.astro';
+import Hero from '@layoutFoundation/Hero.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('work');
+  return posts.map(post => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const seoContent = {
+	title: post.data.seo.title,
+	description: post.data.seo.description,
+}
+
+const heroContent = {
+	headline: post.data.hero.headline,
+	lead: post.data.hero.lead,
+	section: {
+		aria: post.data.hero.aria,
+		grid: post.data.hero.grid,
+		spacing: post.data.hero.spacing,
+		span: post.data.hero.span,
+	},
+	ctas: post.data.hero.ctas ?? [],
+}
+---
+
+<Base {seoContent}>
+	<Hero content={heroContent} />
+
+	<Content />
+
+</Base>

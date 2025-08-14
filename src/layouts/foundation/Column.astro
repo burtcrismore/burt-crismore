@@ -1,0 +1,10 @@
+---
+const { class: className, span } = Astro.props;
+
+const classList = [className, span].filter(Boolean).join(" ");
+const hasClass = classList !== "";
+---
+
+<div {...(hasClass && { class: classList })}>
+	<slot />
+</div>

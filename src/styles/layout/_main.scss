@@ -1,0 +1,118 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@styles/functions/token-prefix" as *;
+@use "@tools/mixins/layout/breakpoint" as *;
+
+/*
+=================================================
+Main
+================================================= 
+*/
+.main {
+
+	.support-image {
+		opacity: .7;
+	}
+
+	.page-nav {
+		display: none;
+		@include breakpoint("lg", $breakpoints) {
+			display: block;
+			position: sticky;
+			top: token(space-md-3);
+		}
+
+		&__list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+}
+
+
+/*
+=================================================
+Astro Components
+================================================= 
+*/
+.featured-work {
+
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	&__item {
+		margin: 0 0 token(space-md-3) 0;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+	&__content {
+		display: flex;
+		gap: token(space-sm-5);
+		& > p {
+			margin: 0;
+		}
+	}
+	&__link {
+		font-size: 3rem;
+		background: token(color-surface-brand);
+		padding: token(space-xs-1) token(space-sm-2);
+		color: token(color-content-inverse);
+		align-self: flex-start;
+	}
+}
+
+.card-row {
+	margin-top: token(space-md-1);
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	&__item {
+		margin: 0;
+		padding: 0;
+		display: flex;
+	}
+}
+
+.headline__hr:after {
+	content: "";
+	border-bottom: 8px solid token(color-surface-brand);
+	width: 180px;
+	display: block;
+	padding-top: token(space-md-2);
+}
+
+.company-icons {
+	display: flex;
+	justify-content: space-around;
+	margin-top: token(space-md-1);
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__label {
+		font-size: token(type-size-fine);
+		margin: token(space-xs-3) 0 0 0;
+	}
+}
+
+.point-list {
+	&__item:last-child {
+		.point-list__description {
+			margin-bottom: 0;
+		}
+	}
+}

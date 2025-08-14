@@ -1,0 +1,22 @@
+---
+const {
+	items = [],
+	offset = 0,
+	class: className = ""
+} = Astro.props;
+
+const navClass = ['page-nav', className].filter(Boolean).join(' ');
+---
+
+<nav class={navClass} aria-label="On this page" data-offset={offset}>
+	<p class="sideheading mb-sm-3">On this page</p>
+	<ul class="page-nav__list">
+		{items.map((it: any) => (
+		<li class="page-nav__item">
+			<a class="page-nav__link" href={`#${it.id}`}>{it.label}</a>
+		</li>
+		))}
+	</ul>
+</nav>
+
+<script src="@scripts/utils/scrollToOffset.js"></script>

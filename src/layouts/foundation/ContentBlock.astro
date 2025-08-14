@@ -1,0 +1,47 @@
+---
+const { 
+	// class: colClass = "",
+	aria,
+	eyebrow, 
+	eyebrowTag, 
+	display1,
+	display2,
+	heading,
+	headingAlt,
+	headingTag, 
+	subheading, 
+	lead,
+	fine,
+	tags = [],
+} = Astro.props;
+
+
+
+---
+
+{tags.length > 0 && (
+	<div class="test-case__tags mt-xs-3">
+		{tags.map((tag: string) => (
+			<span class="test-case__tags-label chip">{tag}</span>
+		))}
+	</div>
+)}
+
+{eyebrow && eyebrowTag === "span" && <span class="eyebrow mb-xs-5">{eyebrow}</span>}
+{eyebrow && eyebrowTag === "p" && <p class="eyebrow mb-xs-5">{eyebrow}</p>}
+{eyebrow && eyebrowTag === "h2" && <h2 class="eyebrow mb-xs-5" id={aria}>{eyebrow}</h2>}
+
+{display1 && <div class="display-1 mb-md-1">{display1}</div>}
+{display2 && <div class="display-2 mb-md-1">{display2}</div>}
+
+{heading && headingTag === "p" && <p class="headline headline__hr mb-0">{heading}</p>}
+{heading && headingTag === "h2" && <h2 class="headline headline__hr mb-0" id={aria}>{heading}</h2>}
+
+{headingAlt && <h2 class="heading mb-xs-5" id={aria}>{headingAlt}</h2>}
+
+{subheading && <h3 class="subheading mb-xs-5">{subheading}</h3>}
+
+{lead && <p class="lead m-0">{lead}</p>}
+{fine && <p class="fine">{fine}</p>}
+
+<slot />

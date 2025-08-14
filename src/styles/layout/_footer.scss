@@ -1,0 +1,56 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@styles/functions/token-prefix" as *;
+@use "@tools/mixins/layout/breakpoint" as *;
+
+/* 
+=================================================
+Footer
+================================================= 
+*/
+.footer {
+	&__copyright, &__sign-off {
+		p {
+			margin: 0;
+		}
+		text-align: left;
+		font-size: token(type-size-fine);
+	}
+	&__copyright {
+		@include breakpoint("md", $breakpoints) {
+			text-align: left;
+		}
+	}
+	&__sign-off {
+		@include breakpoint("md", $breakpoints) {
+			text-align: right;
+		}
+	}
+
+	&-nav {
+		display: flex;
+		gap: token(space-lg-1);
+		justify-content: start;
+
+		@include breakpoint("md", $breakpoints) {
+			justify-content: end;
+		}
+
+		&__group {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		&__title {
+			font-weight: token(type-weight-sideheading);
+			margin: 0 0 token(space-xs-4) 0;
+		}
+		&__item {
+			margin: 0 0 token(space-xs-4) 0;
+		}
+	}
+}

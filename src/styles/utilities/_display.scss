@@ -1,0 +1,22 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/utilities/utilities-atomic" as *;
+
+/*
+=================================================
+Display
+================================================= 
+*/
+$display-map: (
+	"block": block,
+	"grid": grid,
+	"inline": inline,
+	"flex": flex,
+	"none": none,
+);
+
+@include utilities-atomic($breakpoint-delimiter, "display", $display-map, $breakpoints);

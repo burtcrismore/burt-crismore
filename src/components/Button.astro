@@ -1,0 +1,96 @@
+---
+import "@styles/components/_button.scss";
+
+const {
+	href,
+	label = "Button CTA",
+	id,
+	variant = "primary",
+	size = "md",
+	type = "button",
+	fullWidth = false,
+	iconOnly = false,
+	icon,
+	iconPosition,
+	target,
+	ariaLabel,
+	ariaLabelledBy,
+	ariaDescribedBy,
+	ariaDescription
+} = Astro.props;
+
+const classList = [
+	"button",
+	`button--${variant}`,
+	`button--${size}`,
+	fullWidth && "button--full",
+	iconOnly && "button--icon-only"
+].filter(Boolean).join(" ");
+
+const iconNameMap = {
+	link: "fa-sharp fa-solid fa-chevron-right",
+	newTab: "fa-sharp fa-solid fa-arrow-up-right-from-square",
+	linkedIn: "fa-brands fa-linkedin",
+};
+
+const iconClass = icon && iconNameMap[icon as keyof typeof iconNameMap] ? iconNameMap[icon as keyof typeof iconNameMap] : null;
+---
+{href ? (
+	<a
+	href={href}
+	class={classList}
+	target={target}
+	aria-label={ariaLabel}
+	aria-labelledby={ariaLabelledBy}
+	aria-describedby={ariaDescribedBy}
+>
+	{iconClass && iconPosition === "left" && (
+		<span class="button__icon button__icon--left">
+			<i class={iconClass} aria-hidden="true"></i>
+		</span>
+	)}
+
+	<span class="button__label">{label}</span>
+
+	{iconClass && iconPosition === "right" && (
+		<span class="button__icon button__icon--right">
+			<i class={iconClass} aria-hidden="true"></i>
+		</span>
+	)}
+
+	{
+		ariaDescribedBy && ariaDescription &&
+		<span id={ariaDescribedBy} class="sr-only" aria-hidden="true">{ariaDescription}</span>
+	}
+
+</a>
+) : (
+<button
+	id={id}
+	class={classList}
+	type={type}
+	aria-label={ariaLabel}
+	aria-labelledby={ariaLabelledBy}
+	aria-describedby={ariaDescribedBy}
+>
+	{iconClass && iconPosition === "left" && (
+		<span class="button__icon button__icon--left">
+			<i class={iconClass} aria-hidden="true"></i>
+		</span>
+	)}
+
+	{!iconOnly && String(label).trim()}
+	
+	{iconClass && iconPosition === "right" && (
+		<span class="button__icon button__icon--right">
+			<i class={iconClass} aria-hidden="true"></i>
+		</span>
+	)}
+	{
+		ariaDescribedBy && ariaDescription &&
+		<span id={ariaDescribedBy} class="sr-only" aria-hidden="true">{ariaDescription}</span>
+	}
+</button>
+)}
+
+
