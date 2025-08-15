@@ -38,6 +38,9 @@ const metaImage = new URL(imagePath, Astro.site).toString();
 		<meta name="twitter:description" content={ seoContent.description } />
 		<meta name="twitter:image" content={metaImage} />
 
+		<!-- Site Map -->
+		<link rel="sitemap" href="https://burtcrismore.com/sitemap-index.xml" />
+
 		<!-- Astro Meta -->
 		<meta name="generator" content={Astro.generator} />
 
