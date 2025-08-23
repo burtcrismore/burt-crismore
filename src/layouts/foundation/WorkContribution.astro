@@ -1,0 +1,21 @@
+---
+const { contribution } = Astro.props;
+
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+---
+<ContentRow
+	grid="lg:grid-col-3-9"
+	spacing="lg:gx-md-5"
+	class="work-contribution"
+>
+	<Column>
+		<ContentBlock
+			subheading="My contribution"
+		/>
+	</Column>
+	<Column>
+		{contribution && <p class="m-0">{contribution}</p>}
+	</Column>
+</ContentRow>

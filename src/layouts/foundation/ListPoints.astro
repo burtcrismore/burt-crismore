@@ -1,0 +1,26 @@
+---
+const { items = [], grid, spacing, class: className } = Astro.props;
+const classList = [
+	"grid", 
+	"point-list",
+	grid, 
+	spacing,
+	className,
+].filter(Boolean).join(' ');
+---
+
+<div class="container">
+	<ul class={classList}>
+		{items.map((item: any, index: any) => (
+		<li class="point-list__item flex md:flex-col gx-md-3">
+			<div class="point-list__number display-1 md:mb-md-1">
+				{String(index + 1).padStart(2, '0')}
+			</div>
+			<div class="point-list__content">
+				<h3 class="point-list__heading mb-xs-5">{item.title}</h3>
+				<p class="point-list__description">{item.description}</p>
+			</div>
+		</li>
+		))}
+	</ul>
+</div>

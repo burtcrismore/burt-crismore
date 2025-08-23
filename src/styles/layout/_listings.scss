@@ -12,7 +12,7 @@ Modules
 Listings
 ================================================= 
 */
-.test-case {
+.case-study {
 
 	&__list {
 		margin: 0;
@@ -50,14 +50,18 @@ Listings
 			top: 50%;
 			left: 0;
 			transform: translateY(-50%);
-			font-size: 3rem;
 			background: token(color-surface-brand);
-			padding: token(space-xs-1) token(space-sm-2);
+			padding: token(space-xs-5) token(space-sm-2);
 			color: token(color-content-inverse);
 
 			@include breakpoint("sm", $breakpoints) {
 				left: -29px;
 			}
 		}
+	}
+
+	&__icon {
+		font-size: 3rem;
+		width: auto;
 	}
 }

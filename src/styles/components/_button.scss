@@ -24,12 +24,15 @@ Button
 	border: none;
 	border-radius: token(radius-0);
 
+	&__icon {
+		width: auto;
+	}
 
 	&__icon--left {
-		margin-right: token(space-xs-5);
+		margin-right: token(space-sm-1);
 	}
 	&__icon--right {
-		margin-left: token(space-xs-5);
+		margin-left: token(space-sm-1);
 	}
 
 	&:focus {
@@ -65,7 +68,6 @@ Button
 
 		.button__icon--right {
 			color: token(color-content-inverse);
-			font-size: 1rem;
 			background: token(color-surface-brand);
 			padding: token(space-xs-1) token(space-xs-2);
 		}

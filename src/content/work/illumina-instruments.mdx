@@ -10,244 +10,304 @@ import Section from "@layoutFoundation/Section.astro";
 import ContentRow from "@layoutFoundation/ContentRow.astro";
 import Column from "@layoutFoundation/Column.astro";
 import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import WorkContribution from "@layoutFoundation/WorkContribution.astro";
+import ListDetails from "@layoutFoundation/ListDetails.astro";
+import ListPoints from "@layoutFoundation/ListPoints.astro";
+import ListBullets from "@layoutFoundation/ListBullets.astro";
 import ImageBlock from "@layoutFoundation/ImageBlock.astro";
 import ProjectOverview from "@layoutFoundation/ProjectOverview.astro";
-import PointList from "@layoutFoundation/PointList.astro";
 import ButtonGroup from "src/components/ButtonGroup.astro";
 import Button from "src/components/Button.astro";
-import challengeImg from "@images/test-case/instruments/illumina-instruments-challenge.png";
-import solutionImg from "@images/test-case/instruments/illumina-instruments-solution.png"
-import resultsImg from "@images/test-case/instruments/illumina-instruments-results.png"
 
 
 {/* OVERVIEW SECTION */}
 <Section class="section-space section-row-gap" aria="overview-section">
-  <ContentRow
-    grid="lg:grid-col-6-6"
-    spacing="content-row-gap"
-  >
-      <Column class="column-gap-fill">
-        <ContentBlock
-          aria="overview-section"
-          heading="Project overview"
-          headingTag="h2"
-        />
-        <ProjectOverview
-          data={[
-            {
-            heading: "Role",
-            items: ["Product Designer", "Developer", "Delivery"]
-            },
-            {
-            heading: "Skillset",
-            items: ["Prototyping", "Usability Testing"]
-            },
-            {
-            heading: "Tools",
-            items: ["Figma", "Jira", "Confluence", "AEM"]
-            },
-            {
-            heading: "Team",
-            items: ["Project Manager", "Designer", "Strategist", "Engineer", "Analyst"]
-            }
-          ]}
-        />
-      </Column>
-      <Column class="last-p">
-        <ContentBlock
-          subheading="A more scalable foundation"
-          tags={["Product Design"]}
-        />
-        The instrument section of Illumina.com showcases high-value sequencing systems, but the existing structure made it difficult for users to compare options or determine the best fit for their needs. I worked with cross-functional teams on a redesign to clarify the experience, improve wayfinding, and create a scalable foundation for current and future products.
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+			<ContentBlock
+				aria="overview-section"
+				heading="Project overview"
+				headingTag="h2"
+			/>
+			<ProjectOverview
+				data={[
+				{
+				heading: "Role",
+				items: ["Product Designer", "Developer", "Delivery"]
+				},
+				{
+				heading: "Skillset",
+				items: ["Prototyping", "Usability Testing"]
+				},
+				{
+				heading: "Tools",
+				items: ["Figma", "Jira", "Confluence", "AEM"]
+				},
+				{
+				heading: "Team",
+				items: ["Project Manager", "Designer", "Strategist", "Engineer", "Analyst"]
+				}
+				]}
+			/>
+		</Column>
+		<Column class="last-p">
+			<ContentBlock
+				subheading="A more scalable foundation"
+				tags={["Product Design"]}
+			/>
+			The instrument section of <a href="http://www.illumina.com" target="_blank">Illumina</a> showcases high-value sequencing systems, but the existing structure made it difficult for users to compare options or determine the best fit for their needs. I worked with cross-functional teams on a redesign to clarify the experience, improve wayfinding, and create a scalable foundation for current and future products.
 
-        <ButtonGroup>
-          <Button 
-            label="View Figma prototype"
-            href="https://www.figma.com/design/mf0srT4QCbZMaK9JBHel2L/Illumina?node-id=152-844&t=AcOwIz87IRIjTPGI-1"
-            variant="primary"
-            icon="newTab"
-            iconPosition="right"
-            target="_blank"
-            ariaDescribedBy="view-prototype"
-            ariaDescription="Link opens in a new tab and directs to Figma.com."
-          />
-        </ButtonGroup>
-      </Column>
-  </ContentRow>
+			<ButtonGroup>
+				<Button 
+				label="View Figma prototype"
+				href="https://www.figma.com/design/mf0srT4QCbZMaK9JBHel2L/Illumina?node-id=152-844&t=AcOwIz87IRIjTPGI-1"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="view-prototype"
+				ariaDescription="Link opens in a new tab and directs to Figma.com."
+				/>
+			</ButtonGroup>
+		</Column>
+	</ContentRow>
+
+	<WorkContribution
+		contribution="I was the product designer for the Instruments section. I designed the UI, defined page templates, and built core components and early tokens that later fed the design system. I partnered with content, development, QA, and stakeholders to align requirements, validate behavior, and ship a quality release."
+	/>
 </Section>
 
 
 {/* CHALLENGE SECTION */}
 <Section class="section-space section-row-gap" aria="challenge-section">
-  <ContentRow
-    grid="lg:grid-col-6-6"
-    spacing="content-row-gap"
-  >
-    <Column class="column-gap-fill">
-      <ContentBlock
-        aria="challenge-section"
-        heading="The challenge"
-        headingTag="h2"
-        lead="Unifying a fragmented experience to help users find the right product and improve team alignment."
-      />
-    </Column>
-    <Column class="last-p">
-      <ContentBlock
-        subheading="Creating clarity filled with complexity"
-      />
-      The instruments section had evolved without a unified strategy, leading to a disjointed user experience. Visitors struggled to find the right product or understand the differences between systems, and internal teams lacked alignment on structure and purpose. The challenge was creating clarity in a space filled with complexity—both technically and organizationally.
-    </Column>
-  </ContentRow>
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="challenge-section"
+			heading="The challenge"
+			headingTag="h2"
+			lead="Unifying a fragmented experience to help users find the right product and improve team alignment."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Creating clarity filled with complexity"
+		/>
+		The instruments section had evolved without a unified strategy, leading to a disjointed user experience. Visitors struggled to find the right product or understand the differences between systems, and internal teams lacked alignment on structure and purpose. The challenge was creating clarity in a space filled with complexity—both technically and organizationally.
+		</Column>
+	</ContentRow>
 
-  <ContentRow
-    grid="lg:grid-col-6-6"
-    spacing="content-row-gap"
-  >
-    <Column>
-      <ImageBlock
-        src={challengeImg}
-        alt=""
-        class="test-case__image"
-      />
-    </Column>
-    <Column>
-      <PointList
-        items={[
-          {
-            title: "Fragmented structure",
-            description: "Each product page followed its own format, making it difficult for users to compare or navigate confidently.",
-          },
-          {
-            title: "No entry point for comparison",
-            description: "The site lacked a centralized way to explore instruments side by side or by use case.",
-          },
-          {
-            title: "Competing internal goals",
-            description: "Marketing prioritized storytelling while users wanted clear, actionable answers—causing misalignment in content priorities.",
-          },
-          {
-            title: "Dense, technical content",
-            description: "The complexity of the subject matter made it hard to present information in a way that was both comprehensive and accessible.",
-          },
-        ]}
-      />
-    </Column>
-  </ContentRow>
+	<ListPoints
+		grid="md:grid-col-2 lg:grid-col-4"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+			{
+			title: "Fragmented structure",
+			description: "Each product page followed its own format, making it difficult for users to compare or navigate confidently.",
+			},
+			{
+			title: "No entry point for comparison",
+			description: "The site lacked a centralized way to explore instruments side by side or by use case.",
+			},
+			{
+			title: "Competing internal goals",
+			description: "Marketing prioritized storytelling while users wanted clear, actionable answers, causing misalignment in content priorities.",
+			},
+			{
+			title: "Dense, technical content",
+			description: "The complexity of the subject matter made it hard to present information in a way that was both comprehensive and accessible.",
+			},
+		]}
+	/>
+</Section>
+
+
+{/* APPROACH SECTION */}
+<Section class="section-space section-row-gap" aria="approach-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="approach-section"
+			heading="The approach"
+			headingTag="h2"
+			lead="Bringing structure and consistency to help users evaluate instruments with confidence."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="A framework for clarity"
+		/>
+		We created a repeatable model that organized instruments consistently, highlighted differentiators, and clarified next steps. The redesign needed to reduce complexity for users while giving internal teams a structure they could maintain over time. To achieve this, we approached the project by focusing on:
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Templates",
+			description: "Defined standardized pages for instrument overview, specifications, applications, and supporting content.",
+		},
+		{
+			title: "Comparison model",
+			description: "Introduced layouts that allowed instruments to be evaluated side by side with ease.",
+		},
+		{
+			title: "Reusable patterns",
+			description: "Designed flexible patterns for workflows, content modals, promotions, CTAs, products, and forms.",
+		},
+		{
+			title: "Conversion focus",
+			description: "Made calls to action—order and speak with a specialist—more prominent and accessible.",
+		},
+		]}
+	/>
 </Section>
 
 
 {/* SOLUTION SECTION */}
 <Section class="section-space section-row-gap" aria="solution-section">
-  <ContentRow
-    grid="lg:grid-col-6-6"
-    spacing="content-row-gap"
-  >
-    <Column class="column-gap-fill">
-      <ContentBlock
-        aria="solution-section"
-        heading="The solution"
-        headingTag="h2"
-        lead="Created a modular framework to simplify navigation, align teams, and support future scale."
-      />
-    </Column>
-    <Column class="last-p">
-      <ContentBlock
-        subheading="Building flexibility into a complex system"
-      />
-      To unify the user experience and support business goals, I introduced a modular design system that brought consistency across product pages while allowing flexibility for product-specific content. The new framework made it easier for users to find and compare instruments, while also improving internal alignment and long-term scalability.
-    </Column>
-  </ContentRow>
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="solution-section"
+			heading="The solution"
+			headingTag="h2"
+			lead="Transforming fragmented pages into a unified section that simplified exploration and action."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="From fragmentation to focus"
+		/>
+		The redesigned instruments section launched as a consistent framework of templates and patterns. Instead of disjointed experiences, users could now explore instruments in a structured way, compare options directly, and take the next step with confidence. The redesign delivered:
+		</Column>
+	</ContentRow>
 
-  <ContentRow
-    grid="lg:grid-col-6-6"
-    spacing="content-row-gap"
-  >
-    <Column>
-      <ImageBlock
-        src={solutionImg}
-        alt=""
-        class="test-case__image"
-      />
-    </Column>
-    <Column>
-      <PointList
-        items={[
-          {
-            title: "Modular page framework",
-            description: "Designed a flexible layout system that could adapt to a variety of instruments and use cases—removing the need to start from scratch with each new product.",
-          },
-          {
-            title: "Unified architecture",
-            description: "Standardized page structures and reusable components to ensure consistency, reduce team overhead, and simplify maintenance.",
-          },
-          {
-            title: "User-centered hierarchy",
-            description: "Organized content with clarity and action in mind, making it easier for users to explore, scan, and decide.",
-          },
-          {
-            title: "Cross-functional collaboration",
-            description: "Worked closely with stakeholders across content, development, and marketing to align on structure, ownership, and accessibility.",
-          },
-        ]}
-      />
-    </Column>
-  </ContentRow>
+	<ListDetails
+		grid="md:grid-col-2 lg:grid-col-3"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Templates",
+			description: "Standardized pages gave every instrument a consistent, predictable structure.",
+			icon: "template"
+		},
+		{
+			title: "Comparisons",
+			description: "Side-by-side layouts reduced friction in evaluating multiple systems.",
+			icon: "compare"
+		},
+		{
+			title: "Pathways",
+			description: "Prominent calls to order or connect with a specialist turned evaluation into conversion.",
+			icon: "path",
+			class: "md:col-span-full lg:col-span-auto"
+		},
+		]}
+	/>
 </Section>
+
 
 {/* RESULTS SECTION */}
 <Section class="section-space section-row-gap" aria="results-section">
-  <ContentRow
-    grid="lg:grid-col-6-6"
-    spacing="content-row-gap"
-  >
-    <Column class="column-gap-fill">
-      <ContentBlock
-        aria="results-section"
-        heading="The results"
-        headingTag="h2"
-        lead="Launched a unified experience that improved clarity, team alignment, and long-term scalability."
-      />
-    </Column>
-    <Column class="last-p">
-      <ContentBlock
-        subheading="Clearer outcomes, stronger alignment"
-      />
-      The redesign improved how users discover and compare systems while aligning internal teams around a shared structure. It also reduced friction, supported product storytelling, and created a scalable foundation for ongoing product expansion and content growth.
-    </Column>
-  </ContentRow>
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="results-section"
+			heading="The results"
+			headingTag="h2"
+			lead="Clearer navigation, easier evaluation, and stronger pathways to purchase."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Results achieved"
+		/>
+		The redesign created measurable improvements in how users explored instruments and how teams managed them. By simplifying page structures, introducing comparison, and clarifying calls to action, the section drove better decision-making and alignment across groups.
+		</Column>
+	</ContentRow>
 
-  <ContentRow
-    grid="lg:grid-col-6-6"
-    spacing="content-row-gap"
-  >
-    <Column>
-      <ImageBlock
-        src={resultsImg}
-        alt=""
-        class="test-case__image"
-      />
-    </Column>
-    <Column>
-      <PointList
-        items={[
-          {
-            title: "Improved discoverability",
-            description: "Users could more easily find the right system, compare detailed specs, and understand which instrument matched their needs.",
-          },
-          {
-            title: "Standardized experience",
-            description: "Reusable templates and consistent layouts enabled teams to scale updates faster and with fewer errors.",
-          },
-          {
-            title: "Reduced internal friction",
-            description: "Shared design patterns helped clarify team roles, simplify content workflows, and reduce bottlenecks across groups.",
-          },
-          {
-            title: "Scalable foundation",
-            description: "The modular approach provided flexibility for new content and future product launches without needing to redesign.",
-          },
-        ]}
-      />
-    </Column>
-  </ContentRow>
+	<ListBullets
+		items={[
+		{
+			title: "Easier evaluation",
+			description: "We made it easier to evaluate instruments by structuring pages around key differentiators and adding side-by-side comparison, reducing guesswork early in research.",
+		},
+		{
+			title: "Clearer next steps",
+			description: "We increased readiness to purchase by making “Order” and “Speak with a specialist” prominent and predictable, turning evaluation into action when interest peaked.",
+		},
+		{
+			title: "Consistent experience",
+			description: "We improved consistency across instrument pages by standardizing templates and patterns, helping visitors scan faster and teams keep content aligned.",
+		},
+		{
+			title: "Faster updates",
+			description: "We sped up maintenance by using reusable patterns for specs, promos, and forms, so teams could add or update instruments without custom layout work.",
+		},
+		{
+			title: "Scalable foundation",
+			description: "We prepared the section to scale by establishing a repeatable model and early tokens, easing future additions and feeding the enterprise design system.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* REFLECTION SECTION */}
+<Section class="section-space section-row-gap" aria="reflection-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="reflection-section"
+			heading="Reflection"
+			headingTag="h2"
+			lead="Consistency across instruments meant clarity for users and efficiency for teams."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Balancing patterns with storytelling"
+		/>
+		I learned that having a structured family of instruments created consistency that both users and internal teams could benefit from. We also discovered how to manage complex patterns and tell a clear story, even with highly technical content.
+
+		<ContentBlock
+			subheading="Curious where to go from here?"
+		/>
+		These are short-form case studies designed for quick reading. I'd be happy to walk through this project in more detail over a quick chat.
+
+			<ButtonGroup>
+				<Button 
+				label="Let's connect"
+				href="https://www.linkedin.com/in/burtcrismore/"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="connect-on-linkedin"
+				ariaDescription="Link opens in a new tab and directs to LinkedIn.com."
+				/>
+			</ButtonGroup>
+		</Column>
+	</ContentRow>
 </Section>

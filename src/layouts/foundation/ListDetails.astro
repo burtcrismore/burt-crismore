@@ -1,0 +1,41 @@
+---
+const { items = [], grid, spacing, class: className, icon } = Astro.props;
+const classList = [
+	"grid", 
+	"detail-list",
+	grid, 
+	spacing,
+	className,
+].filter(Boolean).join(' ');
+
+const iconNameMap = {
+	component: "fa-sharp fa-solid fa-diamonds-4",
+	token: "fa-sharp fa-solid fa-coin-front",
+	doc: "fa-sharp fa-solid fa-book",
+	template: "fa-sharp fa-solid fa-layer-group",
+	compare: "fa-sharp fa-solid fa-down-left-and-up-right-to-center",
+	path: "fa-sharp fa-solid fa-arrows-spin",
+};
+---
+
+<div class="container">
+	<ul class={classList}>
+		{items.map((item: any) => {
+
+		const iconClass = item.icon ? iconNameMap[item.icon as keyof typeof iconNameMap] : null;
+		const itemClass = ["detail-list__item", item.class].filter(Boolean).join(" ");
+
+		return (
+			<li class={itemClass}>
+				<div class="detail-list__content">
+				{iconClass && (
+					<span class={`detail-list__icon ${iconClass}`} aria-hidden="true"></span>
+				)}
+				<h3 class="detail-list__heading mb-xs-5">{item.title}</h3>
+				<p class="detail-list__description">{item.description}</p>
+				</div>
+			</li>
+		);
+		})}
+	</ul>
+</div>

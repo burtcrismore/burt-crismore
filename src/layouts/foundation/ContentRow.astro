@@ -1,7 +1,7 @@
 ---
 import CardRow from "./CardRow.astro";
 
-const { grid, spacing, gap, component } = Astro.props;
+const { grid, spacing, class: className, component } = Astro.props;
 
 const componentMap = {
 	CardRow
@@ -12,10 +12,9 @@ const Component = component?.type
 
 const classList = [
 	"grid", 
-	// "content-row-gap", 
 	grid, 
-	spacing, 
-	// gap
+	spacing,
+	className,
 ].filter(Boolean).join(' ');
 ---
 

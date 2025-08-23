@@ -5,6 +5,7 @@ Modules
 */
 @use "@styles/base/settings" as *;
 @use "@tools/mixins/utilities/utilities-grid" as *;
+@use "@tools/mixins/utilities/utilities-semantic" as *;
 
 /*
 =================================================
@@ -27,6 +28,12 @@ $grid-split-map: (
 	"11fr 1fr": "11-1"
 );
 
+$grid-span-map: (
+	"col-span-full": ("grid-column": "1 / -1"),
+	"col-span-auto": ("grid-column": auto),
+);
+
+@include utilities-semantic($breakpoint-delimiter, $grid-span-map, $breakpoints);
 
 @include utilities-grid-columns($breakpoint-delimiter, "grid-col", $grid-columns, $breakpoints);
 @include utilities-grid-rows($breakpoint-delimiter, "grid-row", $grid-rows, $breakpoints);

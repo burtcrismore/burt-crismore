@@ -2,7 +2,7 @@
 const { content } = Astro.props;
 ---
 
-<article class="card card--recommendation" tabindex="0">
+<div class="card card--recommendation" tabindex="0">
 	<a 
 		class="card__quote-icon" 
 		href={content.link.url} 
@@ -20,4 +20,4 @@ const { content } = Astro.props;
 			{content.title && <div class="card__person-title">{content.title}</div>}
 		</div>
 	)}
-</article>
+</div>

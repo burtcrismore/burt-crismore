@@ -1,24 +1,24 @@
 ---
-import "@styles/layout/_main.scss";
+// import "@styles/layout/_main.scss";
 
 const { aria = "View case study", items = [] } = Astro.props;
 ---
 <ul class="featured-work__list">
 	{items.map((item: any) => (
 		<li class="featured-work__item">
-			<h3 class="featured-work__heading sideheading mb-sm-1">
-			{item.title}
+			<h3 class="featured-work__heading sideheading mb-sm-2">
+				{item.title}
 			</h3>
 
 			<div class="featured-work__content">
-			<a
-				href={item.href}
-				class="featured-work__link"
-				aria-label={item.ariaLabel || aria}
-			>
-				<i class="fa-sharp fa-solid fa-chevron-right" aria-hidden="true"></i>
-			</a>
-			{item.description && <p>{item.description}</p>}
+				<a
+					href={item.href}
+					class="featured-work__link"
+					aria-label={item.ariaLabel || aria}
+				>
+					<span class="fa-sharp fa-solid fa-chevron-right featured-work__icon" aria-hidden="true"></span>
+				</a>
+				{item.description && <p>{item.description}</p>}
 			</div>
 		</li>
 	))}

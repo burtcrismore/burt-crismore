@@ -1,0 +1,299 @@
+---
+hero:
+  headline: "Illumina design system"
+  lead: "A unified system that improved efficiency, consistency, and launch quality across digital teams."
+seo:
+  title: "Illumina Design System | Burt Crismore"
+  description: "Built and led phase one of the Illumina Design System from concept to launch — defining tokens, components, and governance to improve speed, quality, and collaboration."
+---
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import WorkContribution from "@layoutFoundation/WorkContribution.astro";
+import ListDetails from "@layoutFoundation/ListDetails.astro";
+import ListPoints from "@layoutFoundation/ListPoints.astro";
+import ListBullets from "@layoutFoundation/ListBullets.astro";
+import ImageBlock from "@layoutFoundation/ImageBlock.astro";
+import ProjectOverview from "@layoutFoundation/ProjectOverview.astro";
+import ButtonGroup from "src/components/ButtonGroup.astro";
+import Button from "src/components/Button.astro";
+
+{/* OVERVIEW SECTION */}
+<Section class="section-space section-row-gap" aria="overview-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+			<ContentBlock
+				aria="overview-section"
+				heading="Project overview"
+				headingTag="h2"
+			/>
+			<ProjectOverview
+				data={[
+				{
+				heading: "Role",
+				items: ["Product Designer", "Operations", "Developer", "Delivery"]
+				},
+				{
+				heading: "Skillset",
+				items: ["Design Systems", "Product Strategy", "Workshop Facilitation"]
+				},
+				{
+				heading: "Tools",
+				items: ["Figma", "Storybook", "Jira", "Confluence", "GitHub"]
+				},
+				{
+				heading: "Team",
+				items: ["Designers", "Engineers", "Content", "QA"]
+				}
+				]}
+			/>
+		</Column>
+		<Column class="last-p">
+			<ContentBlock
+				subheading="Unifying work across teams"
+				tags={["Product Design", "Operations"]}
+			/>
+			<a href="http://www.illumina.com" target="_blank">Illumina's</a> digital experiences were built in silos, with each team solving problems in its own way. Without shared standards, design and development duplicated work, slowed releases, and introduced defects late in the process. To improve speed and quality, Illumina needed a system to unify teams around a single source of truth—a scalable foundation that strengthened collaboration, reduced rework, and supported future growth.
+		</Column>
+	</ContentRow>
+
+	<WorkContribution
+		contribution="I led phase one of the Illumina Design System, overseeing design and operations from concept through launch. I later supported phase two as the system scaled across the organization. My work included defining tokens, building reusable components, and establishing governance and workflows to ensure the system became a trusted foundation for design, development, content, and QA."
+	/>
+</Section>
+
+
+{/* CHALLENGE SECTION */}
+<Section class="section-space section-row-gap" aria="challenge-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="challenge-section"
+			heading="The challenge"
+			headingTag="h2"
+			lead="Fragmented tools and processes slowed delivery and reduced quality."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Inconsistent practices across teams"
+		/>
+		Without a shared framework, teams worked independently, creating redundant work and introducing risk. Projects often repeated the same problems, with inconsistencies surfacing late and extra effort required to fix them. These recurring issues created four main challenges that needed to be addressed.
+		</Column>
+	</ContentRow>
+
+	<ListPoints
+		grid="md:grid-col-2 lg:grid-col-4"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Duplicate patterns",
+			description: "Each team built its own UI elements, leading to inconsistency and wasted effort.",
+		},
+		{
+			title: "No source of truth",
+			description: "Design and development worked from different references, causing misalignment.",
+		},
+		{
+			title: "Delayed launches",
+			description: "Rework and conflicting approaches slowed time-to-market.",
+		},
+		{
+			title: "Quality issues",
+			description: "Inconsistencies created defects that surfaced late, increasing cost and risk.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* APPROACH SECTION */}
+<Section class="section-space section-row-gap" aria="approach-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="approach-section"
+			heading="The approach"
+			headingTag="h2"
+			lead="Combining design and operations to ensure adoption across teams and workflows."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="From audit to adoption"
+		/>
+		We treated the design system as both a design and operational product. It needed strong foundations, but also workflows and governance to make sure teams actually used it. To achieve this, we approached the project by focusing on:
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Audit",
+			description: "Cataloged existing UI and content patterns to identify redundancies.",
+		},
+		{
+			title: "Foundation",
+			description: "Defined tokens for color, elevation, motion, opacity, radius, spacing, and typography.",
+		},
+		{
+			title: "Components",
+			description: "Built reusable libraries in Figma and code, cutting repetitive work.",
+		},
+		{
+			title: "Operations & Governance",
+			description: "Partnered with dev, content, and QA to design workflows, create documentation, and drive adoption.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* SOLUTION SECTION */}
+<Section class="section-space section-row-gap" aria="solution-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="solution-section"
+			heading="The solution"
+			headingTag="h2"
+			lead="A living library that became the single source of truth for design and development."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="From fragmentation to unity"
+		/>
+		The Illumina Design System launched as a centralized, documented, and governed library of tokens and components. Instead of reinventing patterns, teams could design and build from the same foundation, supported by resources that ensured consistency and adoption. The system delivered:
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2 lg:grid-col-3"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Components",
+			description: "Centralized Figma and coded component libraries.",
+			icon: "component"
+		},
+		{
+			title: "Tokens",
+			description: "Token-driven foundations for consistency and flexibility.",
+			icon: "token"
+		},
+		{
+			title: "Documentation",
+			description: "Documentation and governance for onboarding and adoption.",
+			icon: "doc",
+			class: "md:col-span-full lg:col-span-auto"
+		},
+		]}
+	/>
+</Section>
+
+
+{/* RESULTS SECTION */}
+<Section class="section-space section-row-gap" aria="results-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="results-section"
+			heading="The results"
+			headingTag="h2"
+			lead="Faster launches, fewer defects, and stronger alignment across teams."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Results achieved"
+		/>
+		The design system created measurable improvements in how digital work was delivered. By reducing rework, improving collaboration, and providing a shared foundation, it drove meaningful results across teams.
+		</Column>
+	</ContentRow>
+
+	<ListBullets
+		items={[
+		{
+			title: "30-40% fewer repetitive tasks",
+			description: "We reduced repetitive design and development tasks by reusing standardized components, freeing teams to focus on higher-value work.",
+		},
+		{
+			title: "Shorter launch cycles",
+			description: "We achieved shorter launch cycles by streamlining handoffs between design and development, helping teams deliver features faster and more predictably.",
+		},
+		{
+			title: "Fewer post-launch defects",
+			description: "We reduced post-launch defects by reusing validated components across products, leading to more stable releases and reduced support effort.",
+		},
+		{
+			title: "Smoother collaboration",
+			description: "We enabled smoother collaboration by aligning design, development, content, and QA on shared workflows, strengthening cross-functional alignment.",
+		},
+		{
+			title: "Scalable foundation",
+			description: "We established a scalable foundation as the baseline for future Illumina products and campaigns, ensuring consistency and long-term growth.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* REFLECTION SECTION */}
+<Section class="section-space section-row-gap" aria="reflection-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="reflection-section"
+			heading="Reflection"
+			headingTag="h2"
+			lead="More than a system, it was a cultural shift in how digital work got done."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="A system and a way of working"
+		/>
+		The Illumina Design System wasn't just a library of components. It represented a shift in how digital work was planned, built, and delivered. By redefining how teams collaborated, it set a higher bar for consistency, speed, and quality across every experience.
+
+		<ContentBlock
+			subheading="Curious where to go from here?"
+		/>
+		These are short-form case studies designed for quick reading. I'd be happy to walk through this project in more detail over a quick chat.
+
+			<ButtonGroup>
+				<Button 
+				label="Let's connect"
+				href="https://www.linkedin.com/in/burtcrismore/"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="connect-on-linkedin"
+				ariaDescription="Link opens in a new tab and directs to LinkedIn.com."
+				/>
+			</ButtonGroup>
+		</Column>
+	</ContentRow>
+</Section>

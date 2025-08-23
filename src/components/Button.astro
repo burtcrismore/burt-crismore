@@ -45,16 +45,16 @@ const iconClass = icon && iconNameMap[icon as keyof typeof iconNameMap] ? iconNa
 	aria-describedby={ariaDescribedBy}
 >
 	{iconClass && iconPosition === "left" && (
-		<span class="button__icon button__icon--left">
-			<i class={iconClass} aria-hidden="true"></i>
+		<span class="button__icon--left">
+			<i class={`button__icon ${iconClass}`} aria-hidden="true"></i>
 		</span>
 	)}
 
 	<span class="button__label">{label}</span>
 
 	{iconClass && iconPosition === "right" && (
-		<span class="button__icon button__icon--right">
-			<i class={iconClass} aria-hidden="true"></i>
+		<span class="button__icon--right">
+			<i class={`button__icon ${iconClass}`} aria-hidden="true"></i>
 		</span>
 	)}
 

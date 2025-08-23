@@ -1,0 +1,20 @@
+/*
+=================================================
+Modules
+================================================= 
+*/
+@use "@styles/base/settings" as *;
+@use "@tools/mixins/utilities/utilities-semantic" as *;
+
+/*
+=================================================
+Display
+================================================= 
+*/
+$flex-map: (
+	"flex-none": ("flex": none),
+	"flex-row": ("flex-direction": row),
+	"flex-col": ("flex-direction": column),
+);
+
+@include utilities-semantic($breakpoint-delimiter, $flex-map, $breakpoints);
