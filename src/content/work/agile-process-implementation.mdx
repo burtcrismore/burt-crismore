@@ -1,0 +1,313 @@
+---
+hero:
+  headline: "Agile process implementation"
+  lead: "A structured workflow that improved clarity, delivery speed, and collaboration across design, development, and QA."
+seo:
+  title: "Agile Process Implementation | Burt Crismore"
+  description: "Led the shift from waterfall to Agile by designing Jira and Confluence workflows, introducing ceremonies, and coaching adoption to improve speed, quality, and collaboration across design, development, QA, and content."
+---
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import WorkContribution from "@layoutFoundation/WorkContribution.astro";
+import ListDetails from "@layoutFoundation/ListDetails.astro";
+import ListPoints from "@layoutFoundation/ListPoints.astro";
+import ListBullets from "@layoutFoundation/ListBullets.astro";
+import ImageBlock from "@layoutFoundation/ImageBlock.astro";
+import ProjectOverview from "@layoutFoundation/ProjectOverview.astro";
+import ButtonGroup from "src/components/ButtonGroup.astro";
+import Button from "src/components/Button.astro";
+
+{/* OVERVIEW SECTION */}
+<Section class="section-space section-row-gap" aria="overview-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+			<ContentBlock
+				aria="overview-section"
+				heading="Project overview"
+				headingTag="h2"
+			/>
+			<ProjectOverview
+				data={[
+				{
+				heading: "Role",
+				items: ["Operations", "Delivery", "Process Design"]
+				},
+				{
+				heading: "Skillset",
+				items: ["Agile Implementation", "Jira/Confluence Setup", "Workflow Design", "Coaching"]
+				},
+				{
+				heading: "Tools",
+				items: ["Jira", "Confluence", "Figma", "AEM", "GitHub"]
+				},
+				{
+				heading: "Team",
+				items: ["Designers", "Engineers", "Content", "QA"]
+				}
+				]}
+			/>
+		</Column>
+		<Column class="last-p">
+			<ContentBlock
+				subheading="Creating a shared delivery rhythm"
+				tags={["Operations"]}
+			/>
+			<a href="http://www.illumina.com" target="_blank">Illumina's</a> digital work ran in a waterfall style—requirements drifted, teams worked in silos, and QA hit a crunch at the end. I led the move to Agile so teams planned together, delivered in smaller slices, and made progress visible. The focus: clarity up front, predictable cadence, and clean handoffs.
+
+			<ButtonGroup>
+				<Button 
+				label="View Figma document"
+				href="https://www.figma.com/board/wAgWFY0L0HZF6Q3rfQFW12/Illumina-Project-Workflow?node-id=0-1&t=aoa5hBhVTpfznwcm-1"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="view-document"
+				ariaDescription="Link opens in a new tab and directs to Figma.com."
+				/>
+			</ButtonGroup>
+			
+		</Column>
+	</ContentRow>
+
+	<WorkContribution
+		contribution="I led the shift from waterfall to Agile, designing Jira/Confluence workflows, introducing ceremonies, and coaching the team through adoption. My work included backlog management, requirements gathering, training QA, and acting as delivery manager during deployments to ensure launches ran smoothly and efficiently. I also drove continuous process improvements, refining workflows and onboarding practices so the team could scale Agile successfully over time."
+	/>
+</Section>
+
+
+{/* CHALLENGE SECTION */}
+<Section class="section-space section-row-gap" aria="challenge-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="challenge-section"
+			heading="The challenge"
+			headingTag="h2"
+			lead="Unclear requirements and siloed workflows slowed delivery and created risk."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Waterfall slowed feedback and buried risk"
+		/>
+		Work often started without clear requirements, handoffs happened late, and defects surfaced near the end. Reporting to leadership was inconsistent, capacity was unclear, and deployments took too long.
+		</Column>
+	</ContentRow>
+
+	<ListPoints
+		grid="md:grid-col-2 lg:grid-col-4"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Missing requirements",
+			description: "Work often began without clear or documented requirements, leading to rework.",
+		},
+		{
+			title: "Siloed teams",
+			description: "Design, development, and QA operated independently, causing misalignment.",
+		},
+		{
+			title: "QA bottlenecks",
+			description: "QA received little time to validate, leading to late defects and missed deadlines.",
+		},
+		{
+			title: "Unreliable reporting",
+			description: "Leadership lacked visibility into timelines, capacity, and progress.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* APPROACH SECTION */}
+<Section class="section-space section-row-gap" aria="approach-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="approach-section"
+			heading="The approach"
+			headingTag="h2"
+			lead="Introducing Agile to unify process, communication, and delivery."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="From waterfall to working cadence"
+		/>
+		I implemented two-week sprints with lightweight but consistent rituals, standardized how stories and defects were written, and designed Jira boards/flows that mirrored how teams actually worked. Confluence captured requirements so QA could write test cases early.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Ceremonies",
+			description: "Daily standups, sprint planning, backlog refinement, demos, and retros to establish rhythm and accountability.",
+		},
+		{
+			title: "Workflow design",
+			description: "Jira workflows, boards, and ticket naming that supported visibility across design, dev, QA, and content.",
+		},
+		{
+			title: "Story & requirements standards",
+			description: "Confluence templates with acceptance criteria, along with clear guidance for story pointing and defect reporting.",
+		},
+		{
+			title: "Coaching & adoption",
+			description: "Training for new and existing teammates, supported by ongoing backlog hygiene and process improvements.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* SOLUTION SECTION */}
+<Section class="section-space section-row-gap" aria="solution-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="solution-section"
+			heading="The solution"
+			headingTag="h2"
+			lead="A predictable two-week delivery system with Thursday releases and planned UAT."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="A clear system for planning, building, and validating"
+		/>
+		A predictable two-week delivery system with Thursday releases and planned UAT. QA had around five days to validate, or we staggered sprints so QA had a full cycle while development started the next set. Requirements were captured in Confluence and stories flowed end-to-end through Jira.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2 lg:grid-col-3"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Plan",
+			description: "Requirements were documented in Confluence, with UX and content finalizing assets and design delivered through Figma and Zeroheight.",
+			icon: "checklist"
+		},
+		{
+			title: "Build",
+			description: "Engineers worked from GitHub branches and deployed to AEM, with assets managed in the DAM and progress tracked through Jira.",
+			icon: "tool"
+		},
+		{
+			title: "Validate",
+			description: "QA wrote test cases from requirements, thoroughly tested across browsers and devices in AEM, and logged defects before UAT sign-off.",
+			icon: "bug",
+			class: "md:col-span-full lg:col-span-auto"
+		},
+		]}
+	/>
+</Section>
+
+
+{/* RESULTS SECTION */}
+<Section class="section-space section-row-gap" aria="results-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="results-section"
+			heading="The results"
+			headingTag="h2"
+			lead="Faster launches, fewer defects, and stronger alignment across teams."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Results achieved"
+		/>
+		The Agile system reduced risk and made delivery more predictable. With clearer requirements and earlier validation, teams shipped in smaller, safer increments and stakeholders approved work sooner.
+		</Column>
+	</ContentRow>
+
+	<ListBullets
+		items={[
+		{
+			title: "50% faster deployments",
+			description: "Deployment nights were cut in half, with shorter, smoother releases that followed a consistent Thursday cadence every sprint.",
+		},
+		{
+			title: "20% fewer post-launch defects",
+			description: "Clear requirements and planned UAT reduced post-launch defects, strengthened testing coverage, and improved stability across launches.",
+		},
+		{
+			title: "Earlier stakeholder sign-off",
+			description: "Iterative demos captured feedback earlier, reducing late-stage changes and building higher confidence before each release.",
+		},
+		{
+			title: "Clearer capacity and timelines",
+			description: "Story points and backlog refinement gave leaders accuracy on scope, velocity, and realistic delivery dates for every sprint.",
+		},
+		{
+			title: "~20% less time chasing clarity",
+			description: "Teams spent less effort clarifying requirements and gained more focused time delivering meaningful work to end users.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* REFLECTION SECTION */}
+<Section class="section-space section-row-gap" aria="reflection-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="reflection-section"
+			heading="Reflection"
+			headingTag="h2"
+			lead="More than a system, it was a cultural shift in how digital work got done."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="A steady cadence that reshaped delivery"
+		/>
+		Agile was more than a process change—it created a shared rhythm for how work moved from idea to release. Requirements were clearer, testing had the time it needed, and deployments became faster and less stressful. The steady cadence built confidence across design, development, QA, and content, replacing last-minute scrambles with a culture of predictability, collaboration, and continuous improvement.
+
+		<ContentBlock
+			subheading="Curious where to go from here?"
+		/>
+		These are short-form case studies designed for quick reading. I'd be happy to walk through this case study in more detail over a quick chat.
+
+			<ButtonGroup>
+				<Button 
+				label="Let's connect"
+				href="https://www.linkedin.com/in/burtcrismore/"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="connect-on-linkedin"
+				ariaDescription="Link opens in a new tab and directs to LinkedIn.com."
+				/>
+			</ButtonGroup>
+		</Column>
+	</ContentRow>
+</Section>

@@ -8,6 +8,7 @@ import ContentRow from "@layoutFoundation/ContentRow.astro";
 import Column from "@layoutFoundation/Column.astro";
 import ContentBlock from "@layoutFoundation/ContentBlock.astro";
 import designSystemImg from "@images/case-study/illumina-design-system/illumina-design-system.jpg";
+import agileImg from "@images/case-study/agile-process-implementation/agile-process-implementation.jpg";
 import instrumentsImg from "@images/case-study/illumina-instruments/illumina-instruments.jpg";
 
 const seoContent = {
@@ -35,7 +36,15 @@ const caseStudies = [
 		description: "Led phase one of the design system from concept to launch, then supported phase two as it scaled. Established tokens, components, and governance to drive adoption across teams.",
 		image: designSystemImg,
 		link: "/work/illumina-design-system",
-		alt: "Web browser showing snapshots of the redesign"
+		alt: "Snapshot of brand guidelines"
+	},
+	{
+		tags: ["Operations"],
+		subheading: "Agile Process Implementation",
+		description: "Led the transition from waterfall to Agile by designing Jira/Confluence workflows, introducing ceremonies, and coaching adoption. Improved clarity of requirements, reduced deployment risk, and strengthened collaboration across design, development, QA, and content teams.",
+		image: agileImg,
+		link: "/work/agile-process-implementation",
+		alt: "Snapshot of agile workflow"
 	},
 	{
 		tags: ["Product Design"],
@@ -43,7 +52,7 @@ const caseStudies = [
 		description: "Redesigned the instruments section to make complex content easier to scan and compare, helping users evaluate systems with clarity.",
 		image: instrumentsImg,
 		link: "/work/illumina-instruments",
-		alt: "Web browser showing snapshots of the redesign"
+		alt: "Scientist working at an Illumina instrument"
 	},
 ];
 ---
