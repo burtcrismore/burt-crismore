@@ -1,0 +1,313 @@
+---
+hero:
+  headline: "Product launch framework"
+  lead: "A repeatable system that streamlined delivery, improved quality, and kept teams aligned across high-stakes launches."
+seo:
+  title: "Product Launch Framework | Burt Crismore"
+  description: "Developed a repeatable framework for product launches by standardizing Confluence and Jira workflows. Created a single source of truth that improved alignment, reduced rework, and enabled on-time delivery across instruments, redesigns, and campaigns."
+---
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import WorkContribution from "@layoutFoundation/WorkContribution.astro";
+import ListDetails from "@layoutFoundation/ListDetails.astro";
+import ListPoints from "@layoutFoundation/ListPoints.astro";
+import ListBullets from "@layoutFoundation/ListBullets.astro";
+import ImageBlock from "@layoutFoundation/ImageBlock.astro";
+import ProjectOverview from "@layoutFoundation/ProjectOverview.astro";
+import ButtonGroup from "src/components/ButtonGroup.astro";
+import Button from "src/components/Button.astro";
+
+{/* OVERVIEW SECTION */}
+<Section class="section-space section-row-gap" aria="overview-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+			<ContentBlock
+				aria="overview-section"
+				heading="Project overview"
+				headingTag="h2"
+			/>
+			<ProjectOverview
+				data={[
+				{
+				heading: "Role",
+				items: ["Operations", "Delivery", "Launch Planning", "Quality"]
+				},
+				{
+				heading: "Skillset",
+				items: ["Project Coordination", "Agile Delivery", "Workflow Design"]
+				},
+				{
+				heading: "Tools",
+				items: ["Jira", "Confluence", "Figma", "AEM"]
+				},
+				{
+				heading: "Team",
+				items: ["Designers", "Engineers", "Content", "QA", "Analytics"]
+				}
+				]}
+			/>
+		</Column>
+		<Column class="last-p">
+			<ContentBlock
+				subheading="Unifying complex launches"
+				tags={["Operations"]}
+			/>
+			<a href="http://www.illumina.com" target="_blank">Illumina</a> product launches involved multiple teams working in silos, each with their own tools and processes. Requirements were scattered across Jira tickets, Figma files, spreadsheets, and email threads, leading to missed deadlines, quality issues, and duplicated effort. To keep launches on track, we needed a single source of truth that aligned every discipline from kickoff through deployment.
+
+			<ButtonGroup>
+				<Button 
+				label="View Figma document"
+				href="https://www.figma.com/board/wAgWFY0L0HZF6Q3rfQFW12/Illumina-Project-Workflow?node-id=48-6728&t=aoa5hBhVTpfznwcm-4"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="view-document"
+				ariaDescription="Link opens in a new tab and directs to Figma.com."
+				/>
+			</ButtonGroup>
+			
+		</Column>
+	</ContentRow>
+
+	<WorkContribution
+		contribution="I created a standardized Confluence template mapped to Jira that centralized project goals, assets, timelines, and team documentation. This framework gave every function—design, dev, UX, content, analytics, and QA—a shared reference point for their work, ensuring alignment, quality, and predictable delivery across repeated product launches."
+	/>
+</Section>
+
+
+{/* CHALLENGE SECTION */}
+<Section class="section-space section-row-gap" aria="challenge-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="challenge-section"
+			heading="The challenge"
+			headingTag="h2"
+			lead="Fragmented tools and poor communication created risk and delayed launches."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Lack of alignment and no single source of truth"
+		/>
+		Launch teams were distributed across design, dev, UX, content, analytics, and QA. Each worked in separate tools with no central plan. The result was unclear ownership, last-minute surprises, and inconsistent delivery.
+		</Column>
+	</ContentRow>
+
+	<ListPoints
+		grid="md:grid-col-2 lg:grid-col-4"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "No shared launch plan",
+			description: "Teams lacked a central framework, leading to inconsistent planning and unclear ownership.",
+		},
+		{
+			title: "Silos and misalignment",
+			description: "Design, dev, and content worked in different tools without visibility into each other's progress.",
+		},
+		{
+			title: "Quality issues",
+			description: "Defects surfaced late in testing, increasing cost and delaying deployment.",
+		},
+		{
+			title: "Scattered assets",
+			description: "Project files and deliverables were spread across platforms, making it hard to track status and find the latest versions.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* APPROACH SECTION */}
+<Section class="section-space section-row-gap" aria="approach-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="approach-section"
+			heading="The approach"
+			headingTag="h2"
+			lead="A structured framework integrated planning, execution, and quality."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Designing a repeatable launch process"
+		/>
+		To reduce risk and improve predictability, I created a standardized launch template in Confluence that documented goals, timelines, ownership, and assets. Linking this to Jira enabled Agile delivery while maintaining a single high-level view.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Centralized framework",
+			description: "A Confluence template captured scope, milestones, owners, and decision logs.",
+		},
+		{
+			title: "Integrated workflows",
+			description: "Jira stories and epics were mapped back to the hub, aligning tasks with the overall plan.",
+		},
+		{
+			title: "Cross-team visibility",
+			description: "Discipline-specific pages listed roles, requirements, and assets, so everyone knew where to look.",
+		},
+		{
+			title: "Repeatable structure",
+			description: "A reusable model ensured every launch began with the same foundation, reducing setup time.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* SOLUTION SECTION */}
+<Section class="section-space section-row-gap" aria="solution-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="solution-section"
+			heading="The solution"
+			headingTag="h2"
+			lead="A launch framework that unified scattered efforts into a single system."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="One hub connected to every discipline"
+		/>
+		The framework became the place to find goals, assets, owners, timelines, and status. It combined high-level visibility for leadership with linked details for each team, bridging planning and execution.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2 lg:grid-col-3"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Hub",
+			description: "Project goals, scope, milestones, and ownership were documented in Confluence as the single source of truth.",
+			icon: "network"
+		},
+		{
+			title: "Integration",
+			description: "Jira tasks were mapped back to Confluence, connecting day-to-day execution with the overall plan.",
+			icon: "puzzle"
+		},
+		{
+			title: "Template",
+			description: "A reusable model standardized setup and ensured every launch began with the same structure.",
+			icon: "memo",
+			class: "md:col-span-full lg:col-span-auto"
+		},
+		]}
+	/>
+</Section>
+
+
+{/* RESULTS SECTION */}
+<Section class="section-space section-row-gap" aria="results-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="results-section"
+			heading="The results"
+			headingTag="h2"
+			lead="Clearer ownership, better quality, and on-time delivery across major launches."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Impact across instruments and web initiatives"
+		/>
+		With a single framework, teams reduced rework, surfaced issues earlier, and delivered launches more predictably. The model scaled from instruments to redesigns and campaigns, becoming the standard way of working.
+		</Column>
+	</ContentRow>
+
+	<ListBullets
+		items={[
+		{
+			title: "Clear ownership",
+			description: "Documented roles and responsibilities clarified accountability, reducing confusion and missed steps.",
+		},
+		{
+			title: "Improved quality",
+			description: "Earlier testing cycles and readiness gates surfaced issues sooner, minimizing last-minute defects and strengthening overall launch stability.",
+		},
+		{
+			title: "On-time launches",
+			description: "Consistently tracked milestones and dependencies kept projects on schedule, giving stakeholders greater confidence in delivery timelines.",
+		},
+		{
+			title: "Less rework",
+			description: "Centralized requirements and assets prevented duplicate effort, saving time and enabling teams to focus on higher-value contributions.",
+		},
+		{
+			title: "Scalable framework",
+			description: "Adopted across instruments, redesigns, and campaigns, the model became a repeatable standard for launching critical initiatives at scale.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* REFLECTION SECTION */}
+<Section class="section-space section-row-gap" aria="reflection-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="reflection-section"
+			heading="Reflection"
+			headingTag="h2"
+			lead="More than documentation, it reshaped how launches were delivered."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="A higher standard for planning and execution"
+		/>
+		The product launch framework transformed fragmented efforts into a unified process. It gave every team clarity, accountability, and earlier quality checks. Beyond instruments, it supported redesigns and campaigns, raising the bar for how Illumina delivered high-impact initiatives.
+
+		<ContentBlock
+			subheading="Curious where to go from here?"
+		/>
+		These are short-form case studies designed for quick reading. I'd be happy to walk through this case study in more detail over a quick chat.
+
+			<ButtonGroup>
+				<Button 
+				label="Let's connect"
+				href="https://www.linkedin.com/in/burtcrismore/"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="connect-on-linkedin"
+				ariaDescription="Link opens in a new tab and directs to LinkedIn.com."
+				/>
+			</ButtonGroup>
+		</Column>
+	</ContentRow>
+</Section>
