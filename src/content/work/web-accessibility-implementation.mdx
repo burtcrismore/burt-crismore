@@ -1,0 +1,313 @@
+---
+hero:
+  headline: "Web accessibility implementation"
+  lead: "Established accessibility as a company standard by aligning Illumina.com to WCAG 2.1 AA, educating teams, and embedding compliance into design, development, and content workflows."
+seo:
+  title: "Web Accessibility Implementation | Burt Crismore"
+  description: "Led Illumina's accessibility initiative by aligning illumina.com to WCAG 2.1 AA. Created documentation, trained teams, updated components, and embedded accessibility into design, development, and content workflows to reduce risk and improve inclusivity."
+---
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import WorkContribution from "@layoutFoundation/WorkContribution.astro";
+import ListDetails from "@layoutFoundation/ListDetails.astro";
+import ListPoints from "@layoutFoundation/ListPoints.astro";
+import ListBullets from "@layoutFoundation/ListBullets.astro";
+import ImageBlock from "@layoutFoundation/ImageBlock.astro";
+import ProjectOverview from "@layoutFoundation/ProjectOverview.astro";
+import ButtonGroup from "src/components/ButtonGroup.astro";
+import Button from "src/components/Button.astro";
+
+{/* OVERVIEW SECTION */}
+<Section class="section-space section-row-gap" aria="overview-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+			<ContentBlock
+				aria="overview-section"
+				heading="Project overview"
+				headingTag="h2"
+			/>
+			<ProjectOverview
+				data={[
+				{
+				heading: "Role",
+				items: ["Accessibility Lead", "Operations", "Developer", "Quality"]
+				},
+				{
+				heading: "Skillset",
+				items: ["Strategy", "Standards", "Education", "Testing", "Documentation"]
+				},
+				{
+				heading: "Tools",
+				items: ["Jira", "Confluence", "WAVE", "Storybook", "GitHub"]
+				},
+				{
+				heading: "Team",
+				items: ["Designers", "Engineers", "Content", "Quality"]
+				}
+				]}
+			/>
+		</Column>
+		<Column class="last-p">
+			<ContentBlock
+				subheading="Building accessibility into every stage"
+				tags={["Operations"]}
+			/>
+			<a href="http://www.illumina.com" target="_blank">Illumina</a> faced increasing legal and compliance risks due to inaccessible digital experiences. Without standards or training, accessibility was inconsistently applied and often overlooked. To close these gaps, I led a company-wide accessibility initiative that set clear standards, created processes, and educated teams, ensuring accessibility became a foundation of Illumina.com.
+
+			<ButtonGroup>
+				<Button 
+				label="View Figma document"
+				href="https://www.figma.com/board/3nzrCa5lOShkKJtWrDIEuZ/Illumina-Web-Accessibility?node-id=0-1&t=Wy1EUrxJ7rpTEJtv-1"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="view-document"
+				ariaDescription="Link opens in a new tab and directs to Figma.com."
+				/>
+			</ButtonGroup>
+			
+		</Column>
+	</ContentRow>
+
+	<WorkContribution
+		contribution="I was responsible for accessibility across illumina.com, managing and writing documentation, setting guidelines, and aligning the team to WCAG 2.1 AA. I created Illumina's accessibility conformance report, educated teams across design, development, and content, validated work before launches, and continually advocated for accessibility across the company. I also wrote demo code to showcase the correct way to implement accessible solutions and modeled how accessibility could be embedded in everyday workflows."
+	/>
+</Section>
+
+
+{/* CHALLENGE SECTION */}
+<Section class="section-space section-row-gap" aria="challenge-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="challenge-section"
+			heading="The challenge"
+			headingTag="h2"
+			lead="Accessibility gaps created inconsistent experiences and compliance risks."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Lack of standards and fragmented knowledge created risk"
+		/>
+		Accessibility was often overlooked, with no shared guidance or accountability across teams. This resulted in inconsistent experiences, repeated issues across projects, and growing compliance concerns. To build trust and meet legal obligations, Illumina needed a unified approach that combined education, standards, and cultural adoption.
+		</Column>
+	</ContentRow>
+
+	<ListPoints
+		grid="md:grid-col-2 lg:grid-col-4"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Lack of standards",
+			description: "No Illumina-specific accessibility documentation, leaving teams without clear direction.",
+		},
+		{
+			title: "Compliance risks",
+			description: "Digital experiences did not meet WCAG 2.1 AA and lacked conformance reporting.",
+		},
+		{
+			title: "Implementation issues",
+			description: "Common problems included missing alt text, poor color contrast, non-semantic markup, and broken keyboard navigation.",
+		},
+		{
+			title: "Limited awareness",
+			description: "Designers, developers, and content authors were unfamiliar with accessibility practices and required ongoing training.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* APPROACH SECTION */}
+<Section class="section-space section-row-gap" aria="approach-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="approach-section"
+			heading="The approach"
+			headingTag="h2"
+			lead="Addressing accessibility as compliance and shared culture."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="From audits to governance and continuous improvement"
+		/>
+		Accessibility could not be solved with quick fixes. It required a structured approach that included audits, documentation, training, and monitoring. By making accessibility part of everyday workflows, I helped teams move from reactive fixes to proactive inclusion.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Audits and evaluation",
+			description: "Conducted accessibility audits across design, development, and content to identify recurring issues and prioritize fixes.",
+		},
+		{
+			title: "Standards and documentation",
+			description: "Created Illumina's accessibility guidelines and established clear processes for validation and reporting.",
+		},
+		{
+			title: "Education and training",
+			description: "Delivered workshops and created code demos to teach designers, developers, and authors practical implementation skills.",
+		},
+		{
+			title: "Monitoring and governance",
+			description: "Introduced automated testing, manual validation, and workflows to ensure ongoing compliance and cultural adoption.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* SOLUTION SECTION */}
+<Section class="section-space section-row-gap" aria="solution-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="solution-section"
+			heading="The solution"
+			headingTag="h2"
+			lead="Embedding accessibility into Illumina.com's delivery lifecycle."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="A shared foundation for inclusive experiences"
+		/>
+		The initiative transformed accessibility from an afterthought into a standard part of delivery. Documentation became the source of truth, components were updated to meet compliance, and a culture of accessibility began to take hold across the organization.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2 lg:grid-col-3"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Standards",
+			description: "Published an accessibility guide and created a public-facing conformance report to establish accountability and transparency.",
+			icon: "memo"
+		},
+		{
+			title: "Components",
+			description: "Updated tokens, design system components, and code examples to meet WCAG 2.1 AA requirements.",
+			icon: "component"
+		},
+		{
+			title: "Culture",
+			description: "Built a foundation of education, documentation, and validation so teams approached every launch with accessibility in mind.",
+			icon: "group",
+			class: "md:col-span-full lg:col-span-auto"
+		},
+		]}
+	/>
+</Section>
+
+
+{/* RESULTS SECTION */}
+<Section class="section-space section-row-gap" aria="results-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="results-section"
+			heading="The results"
+			headingTag="h2"
+			lead="Improved compliance, stronger usability, and cultural adoption."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Accessibility became a foundation for quality and inclusion"
+		/>
+		The initiative reduced compliance risk, improved user experience, and created a culture where accessibility was considered a measure of quality equal to design and performance. It left Illumina with a stronger foundation for delivering inclusive digital experiences.
+		</Column>
+	</ContentRow>
+
+	<ListBullets
+		items={[
+		{
+			title: "WCAG 2.1 AA compliance",
+			description: "Brought Illumina.com into alignment with accessibility standards, ensuring more inclusive and reliable digital experiences for customers and reducing compliance gaps across the site.",
+		},
+		{
+			title: "Reduced legal risk",
+			description: "Introduced a conformance report and governance practices that provided evidence of compliance, helping mitigate legal exposure and building confidence in Illumina’s accessibility posture.",
+		},
+		{
+			title: "Improved usability",
+			description: "Corrected issues such as color contrast, semantic markup, alt text, and keyboard navigation, resulting in experiences that were easier to use for all audiences, including those with assistive technology.",
+		},
+		{
+			title: "Aligned teams",
+			description: "Created shared understanding and workflows across design, development, content, and QA, ensuring accessibility was consistently applied and reducing costly rework late in the process.",
+		},
+		{
+			title: "Cultural adoption",
+			description: "Moved accessibility from a reactive fix to a proactive standard, reinforced by documentation, training, and advocacy that embedded it into Illumina’s digital culture.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* REFLECTION SECTION */}
+<Section class="section-space section-row-gap" aria="reflection-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="reflection-section"
+			heading="Reflection"
+			headingTag="h2"
+			lead="Accessibility shifted from obligation into a more inclusive opportunity."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="A higher standard for planning and execution"
+		/>
+		This project redefined how accessibility was understood at Illumina. What began as a compliance effort became an opportunity to raise the quality of digital experiences for every user. By building standards, training teams, and creating a culture of accessibility, the company reduced risk and embraced inclusion as a measure of excellence. The initiative left a lasting impact, ensuring accessibility would be integrated into planning, development, and delivery.
+
+		<ContentBlock
+			subheading="Curious where to go from here?"
+		/>
+		These are short-form case studies designed for quick reading. I'd be happy to walk through this case study in more detail over a quick chat.
+
+			<ButtonGroup>
+				<Button 
+				label="Let's connect"
+				href="https://www.linkedin.com/in/burtcrismore/"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="connect-on-linkedin"
+				ariaDescription="Link opens in a new tab and directs to LinkedIn.com."
+				/>
+			</ButtonGroup>
+		</Column>
+	</ContentRow>
+</Section>
