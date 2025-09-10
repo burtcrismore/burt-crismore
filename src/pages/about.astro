@@ -12,6 +12,8 @@ import myPrinciplesImg from "@images/arrows.png";
 import headshotImg from "@images/headshot.jpg";
 import myHobbiesImg from "@images/my-hobbies.jpg";
 import CompanyIcons from "@layoutFoundation/CompanyIcons.astro";
+import ButtonGroup from "src/components/ButtonGroup.astro";
+import Button from "src/components/Button.astro";
 
 const seoContent = {
 	title: "About Burt Crismore | Building Systems for Design & Delivery",
@@ -258,6 +260,19 @@ const heroContent = {
 					headingTag="p"
 				/>
 				<p class="m-0">When I'm not working, I spend a lot of time outdoors—usually hiking, photographing landscapes, or capturing the night sky. I'm drawn to quiet places and small details, which is probably why I find so much value in structure, observation, and working with intent. Whether I'm building a system or framing a shot, I'm always looking for clarity.</p>
+
+				<ButtonGroup>
+					<Button 
+					label="View Landscape Photos"
+					href="https://www.instagram.com/thelosttrek/"
+					variant="primary"
+					icon="newTab"
+					iconPosition="right"
+					target="_blank"
+					ariaDescribedBy="view-instagram"
+					ariaDescription="Link opens in a new tab and directs to Instagram.com."
+					/>
+				</ButtonGroup>
 			</Column>
 		</ContentRow>
 	</Section>
