@@ -1,0 +1,313 @@
+---
+hero:
+  headline: "Illumina Website Redesign"
+  lead: "Illumina's site was redesigned to apply updated brand, refine content strategy, and optimize performance for a better experience."
+seo:
+  title: "Illumina Website Redesign | Burt Crismore"
+  description: "Led creative operations for Illumina's website redesign, delivering 410 new pages and 68 components. Modernized AEM templates, evolved brand and content strategy, improved performance, and expanded analytics to support a global site with $1B revenue and 16K pages."
+---
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import WorkContribution from "@layoutFoundation/WorkContribution.astro";
+import ListDetails from "@layoutFoundation/ListDetails.astro";
+import ListPoints from "@layoutFoundation/ListPoints.astro";
+import ListBullets from "@layoutFoundation/ListBullets.astro";
+import ImageBlock from "@layoutFoundation/ImageBlock.astro";
+import ProjectOverview from "@layoutFoundation/ProjectOverview.astro";
+import ButtonGroup from "src/components/ButtonGroup.astro";
+import Button from "src/components/Button.astro";
+
+{/* OVERVIEW SECTION */}
+<Section class="section-space section-row-gap" aria="overview-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+			<ContentBlock
+				aria="overview-section"
+				heading="Project overview"
+				headingTag="h2"
+			/>
+			<ProjectOverview
+				data={[
+				{
+				heading: "Role",
+				items: ["Operations Lead", "Quality Manager"]
+				},
+				{
+				heading: "Skillset",
+				items: ["Delivery", "Quality", "Accessibility", "Governance", "Management"]
+				},
+				{
+				heading: "Tools",
+				items: ["Jira", "Confluence", "Figma", "AEM"]
+				},
+				{
+				heading: "Team",
+				items: ["Designers", "Engineers", "Content", "Quality", "Analysts", "Deloitte"]
+				}
+				]}
+			/>
+		</Column>
+		<Column class="last-p">
+			<ContentBlock
+				subheading="Brand and content modernization at scale"
+				tags={["Operations"]}
+			/>
+			Illumina website redesign delivered 410 new pages and 68 components across sections: <a href="https://www.illumina.com/systems.html" target="_blank">Instruments</a>, <a href="https://www.illumina.com/products.html" target="_blank">Product Detail Pages</a>, and <a href="https://www.illumina.com/company/about-us.html" target="_blank">Company</a>. The rollout spanned US, Japan, China, EMEA, SAPAC, and South Korea. It modernized AEM templates, refined content strategy, took a mobile-first approach while ensuring full desktop support, embedded accessibility, and expanded analytics for a site with $1B revenue, 13.5M visits, and 16K pages.
+
+			<ButtonGroup>
+				<Button 
+				label="View live project"
+				href="https://www.illumina.com"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="view-document"
+				ariaDescription="Link opens in a new tab and directs to Illumina.com."
+				/>
+			</ButtonGroup>
+			
+		</Column>
+	</ContentRow>
+
+	<WorkContribution
+		contribution="I led delivery and deployment, managed Deloitte as the delivery partner, and ran quality from planning through cutover. I built and led a UI testing team for mobile and desktop, wrote requirements and test cases, and defined validation steps across regions. I guided accessibility through hands-on reviews and development demos, worked with stakeholders to align readiness, and used Agile methods to hit milestones with low risk."
+	/>
+</Section>
+
+
+{/* CHALLENGE SECTION */}
+<Section class="section-space section-row-gap" aria="challenge-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="challenge-section"
+			heading="The challenge"
+			headingTag="h2"
+			lead="Outdated brand, limited templates, and inconsistent patterns slowed delivery."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="The site lacked a cohesive, modern brand"
+		/>
+		Illumina's brand and site design were dated. AEM templates lacked options to support marketing at scale. Patterns varied across sections, creating inconsistency and rework. The codebase relied on older libraries, hurting performance and slowing maintenance. Accessibility was not treated as foundational. Analytics needed broader coverage to understand behavior and support personalization across the site.
+		</Column>
+	</ContentRow>
+
+	<ListPoints
+		grid="md:grid-col-2 lg:grid-col-4"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Outdated brand system",
+			description: "Outdated standards and governance led to inconsistent type, color, and messaging across pages, adding QA overhead.",
+		},
+		{
+			title: "Template limitations",
+			description: "AEM templates lacked options for campaigns, prompting one-off builds and workarounds, slowing authoring and reviews.",
+		},
+		{
+			title: "Outdated codebase",
+			description: "Verbose code and older libraries raised maintenance risk. Refactoring and optimization were needed to improve speed.",
+		},
+		{
+			title: "Analytics limitations",
+			description: "Sitewide tracking was limited, reducing insight into behavior and constraining testing, content, and personalization.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* APPROACH SECTION */}
+<Section class="section-space section-row-gap" aria="approach-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="approach-section"
+			heading="The approach"
+			headingTag="h2"
+			lead="Guided the redesign with audits, testing, and alignment to address brand, code, and UX."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Turning research into operational clarity"
+		/>
+		We approached the redesign through structured research and collaborative design. Content and journey audits revealed gaps in voice, tone, and messaging. Stakeholder workshops captured campaign needs and streamlined reviews. The design team evolved the visual language through multiple rounds of refinement, while performance testing, analytics, SEO, customer interviews, and competitive research expanded insight to guide delivery.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Content audit and journey mapping",
+			description: "Inventoried content and design patterns, mapped customer journeys, and exposed inconsistencies, creating a baseline for governance.",
+		},
+		{
+			title: "Stakeholder alignment workshops",
+			description: "Led interviews and workshops to capture campaign needs, refine feedback, and define template requirements to reduce rework.",
+		},
+		{
+			title: "Performance testing and refactoring",
+			description: "Tested speed and efficiency, identified technical debt, and prioritized modernization steps to improve code quality and performance.",
+		},
+		{
+			title: "Expanded analytics and customer insight",
+			description: "Extended tracking with Adobe Analytics and ContentSquare, plus SEO benchmarking and interviews to guide testing and personalization.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* SOLUTION SECTION */}
+<Section class="section-space section-row-gap" aria="solution-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="solution-section"
+			heading="The solution"
+			headingTag="h2"
+			lead="Modernized the site with unified brand, flexible templates, and optimized code."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Systematic fixes to unlock delivery"
+		/>
+		The redesign solved structural problems while raising the overall experience. We unified brand and content standards into a governed design system, created flexible templates to support campaigns and reduce rework, and modernized the codebase for speed and maintainability. These solutions improved consistency, accelerated delivery, and built a stronger foundation for future growth.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2 lg:grid-col-3"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Brand",
+			description: "Unified brand and content standards in a design system, aligning type, color, and messaging to streamline delivery.",
+			icon: "award"
+		},
+		{
+			title: "Templates",
+			description: "Built modular templates to support campaigns, cut one-off builds, and improve continuity in customer journeys.",
+			icon: "template"
+		},
+		{
+			title: "Code",
+			description: "Refactored code and updated libraries to improve performance, lower risk, and make maintenance easier.",
+			icon: "code",
+			class: "md:col-span-full lg:col-span-auto"
+		},
+		]}
+	/>
+</Section>
+
+
+{/* RESULTS SECTION */}
+<Section class="section-space section-row-gap" aria="results-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="results-section"
+			heading="The results"
+			headingTag="h2"
+			lead="Improved brand clarity, streamlined delivery, boosted performance, expanded user insight."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Measurable gains in quality and speed"
+		/>
+		The redesign reshaped how the site worked for both teams and customers. Clearer standards cut rework and brought consistency to brand and content. New templates made campaign delivery faster and journeys smoother. Updates to the codebase improved speed and stability. Expanded analytics gave insight that now guides testing, personalization, and ongoing improvement.
+		</Column>
+	</ContentRow>
+
+	<ListBullets
+		items={[
+		{
+			title: "Brand consistency",
+			description: "Unified type, color, and messaging under a governed system reduced review cycles, simplified authoring, and improved the customer experience.",
+		},
+		{
+			title: "Faster delivery",
+			description: "Modular templates streamlined authoring and QA, reducing one-off builds, improving customer journeys, and accelerating campaign launches.",
+		},
+		{
+			title: "Better performance",
+			description: "Refactored code and updated libraries improved load times, reduced maintenance risk, and eased developer effort for long-term stability.",
+		},
+		{
+			title: "Expanded insight",
+			description: "Extended analytics with Adobe and ContentSquare, added SEO benchmarks, and deepened behavioral visibility to guide testing and decisions.",
+		},
+		{
+			title: "Personalization ready",
+			description: "Enhanced tracking and customer input established a foundation for targeted testing, enabling scalable personalization with lower overhead.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* REFLECTION SECTION */}
+<Section class="section-space section-row-gap" aria="reflection-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="reflection-section"
+			heading="Reflection"
+			headingTag="h2"
+			lead="The project reshaped how I align brand, content, design, and ops to deliver stronger outcomes."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Lessons across teams and systems"
+		/>
+		This project showed me how important it is to bring people, process, and design together. The audits gave everyone a clearer picture, workshops built alignment, and performance testing helped me understand technical decisions more fully. Most of all, I saw how creative ops ties these pieces into a system that helps teams deliver with more clarity, confidence, and speed.
+
+		<ContentBlock
+			subheading="Curious where to go from here?"
+		/>
+		These are short-form case studies designed for quick reading. I'd be happy to walk through this case study in more detail over a quick chat.
+
+			<ButtonGroup>
+				<Button 
+				label="Let's connect"
+				href="https://www.linkedin.com/in/burtcrismore/"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="connect-on-linkedin"
+				ariaDescription="Link opens in a new tab and directs to LinkedIn.com."
+				/>
+			</ButtonGroup>
+		</Column>
+	</ContentRow>
+</Section>
