@@ -1,0 +1,313 @@
+---
+hero:
+  headline: "Quality Management System"
+  lead: "Built Illumina's first QMS for illumina.com, introducing defect tracking, test cases, and workflows to cut bugs and speed delivery."
+seo:
+  title: "Quality Management System | Burt Crismore"
+  description: "Implemented Illumina's first Quality Management System for illumina.com, adding test cases, defect tracking, and workflows that reduced defects, cut release times, and improved stakeholder confidence."
+---
+import Section from "@layoutFoundation/Section.astro";
+import ContentRow from "@layoutFoundation/ContentRow.astro";
+import Column from "@layoutFoundation/Column.astro";
+import ContentBlock from "@layoutFoundation/ContentBlock.astro";
+import WorkContribution from "@layoutFoundation/WorkContribution.astro";
+import ListDetails from "@layoutFoundation/ListDetails.astro";
+import ListPoints from "@layoutFoundation/ListPoints.astro";
+import ListBullets from "@layoutFoundation/ListBullets.astro";
+import ImageBlock from "@layoutFoundation/ImageBlock.astro";
+import ProjectOverview from "@layoutFoundation/ProjectOverview.astro";
+import ButtonGroup from "src/components/ButtonGroup.astro";
+import Button from "src/components/Button.astro";
+
+{/* OVERVIEW SECTION */}
+<Section class="section-space section-row-gap" aria="overview-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+			<ContentBlock
+				aria="overview-section"
+				heading="Project overview"
+				headingTag="h2"
+			/>
+			<ProjectOverview
+				data={[
+				{
+				heading: "Role",
+				items: ["Manager", "Web QA", "Operations"]
+				},
+				{
+				heading: "Skillset",
+				items: ["Ops strategy", "QA Process"]
+				},
+				{
+				heading: "Tools",
+				items: ["Jira", "Confluence", "Browsers & Devices"]
+				},
+				{
+				heading: "Team",
+				items: ["Designers", "Engineers", "Content", "Quality"]
+				}
+				]}
+			/>
+		</Column>
+		<Column class="last-p">
+			<ContentBlock
+				subheading="Bringing structure to quality ops"
+				tags={["Operations"]}
+			/>
+			<a href="https://www.illumina.com" target="_blank">Illumina.com</a> lacked a structured QA practice. Bugs were caught in production, launches ran late, and teams had no documentation, defect tracking, or workflows. Introduced a Quality Management System that added structure to how projects were planned, tested, and released. By defining test cases, adopting Jira, and validating across devices, the digital team cut bugs, sped up launches, and gave stakeholders confidence in delivery.
+
+			<ButtonGroup>
+				<Button 
+				label="View Figma document"
+				href="https://www.figma.com/board/cRF8TinyxpFz8P8zyyIL1i/Illumina-Quality-Management-System?node-id=0-1&t=yJ1xDCh7AMSqPwMS-1"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="view-document"
+				ariaDescription="Link opens in a new tab and directs to Figma.com."
+				/>
+			</ButtonGroup>
+			
+		</Column>
+	</ContentRow>
+
+	<WorkContribution
+		contribution="I designed and implemented the QMS from scratch, creating Illumina.com's first workflows, test cases, and defect reporting structure. I led the adoption of Jira for bug tracking, introduced manual and exploratory testing, and established UAT for stakeholders. My role was hands-on in both strategy and execution, ensuring that quality became a shared responsibility across the digital team."
+	/>
+</Section>
+
+
+{/* CHALLENGE SECTION */}
+<Section class="section-space section-row-gap" aria="challenge-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="challenge-section"
+			heading="The challenge"
+			headingTag="h2"
+			lead="Without quality systems, issues went live and deployments dragged overnight."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Why quality was falling short"
+		/>
+		Behind the scenes, quality was almost invisible. There were no test cases to prove requirements were met, no defect logs to track issues, and no device coverage to ensure the site worked everywhere. Bugs slipped through until launch day, when teams scrambled to patch them in production. Deployments dragged on late into the night, draining resources and eroding trust. Quality was treated as optional rather than essential.
+		</Column>
+	</ContentRow>
+
+	<ListPoints
+		grid="md:grid-col-2 lg:grid-col-4"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Validation gaps",
+			description: "Bugs were often discovered only at launch, forcing last-minute fixes instead of catching problems earlier in testing.",
+		},
+		{
+			title: "Defect tracking",
+			description: "With no Jira workflows or logs, issues slipped through, ownership was unclear, and leaders lacked visibility into progress.",
+		},
+		{
+			title: "Limited coverage",
+			description: "Cross-browser and device testing was absent, leaving critical user journeys broken on common platforms and mobile devices.",
+		},
+		{
+			title: "Unclear ownership",
+			description: "Without clear workflows or gates, teams had no shared responsibility for quality, making releases risky and unpredictable.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* APPROACH SECTION */}
+<Section class="section-space section-row-gap" aria="approach-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="approach-section"
+			heading="The approach"
+			headingTag="h2"
+			lead="Designed quality around prevention, building workflows, test cases, and device coverage."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Establishing reliable QA practices"
+		/>
+		Introduced a prevention-first approach to quality. Test cases were tied to requirements to ensure stakeholder needs were met. Jira became the central system for tracking and resolving issues, with structured workflows for ownership and accountability. A coverage matrix defined supported browsers and devices, and gates were built for design, development, and UAT. Testing expanded to include usability, privacy, and exploratory methods to safeguard the user experience.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Test case design",
+			description: "Created traceable test cases linked to requirements, giving teams measurable criteria for pass or fail outcomes.",
+		},
+		{
+			title: "Jira workflows",
+			description: "Introduced defect logging and triage in Jira, standardizing ownership, priorities, and visibility across projects.",
+		},
+		{
+			title: "Coverage matrix",
+			description: "Defined supported browsers and devices, maintained a physical lab, and validated critical paths across environments.",
+		},
+		{
+			title: "Quality gates",
+			description: "Added checkpoints at design, development, and UAT to shift validation earlier and prevent late-stage surprises.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* SOLUTION SECTION */}
+<Section class="section-space section-row-gap" aria="solution-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="solution-section"
+			heading="The solution"
+			headingTag="h2"
+			lead="Formalized quality with documentation, workflows, and UAT to stabilize launches."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Building a repeatable framework"
+		/>
+		The Quality Management System turned quality into a repeatable discipline. Documentation outlined how to plan, test, and release. Jira became the system of record for tracking and resolution, while a browser and device matrix guided validation. User acceptance testing gave stakeholders visibility and confidence before launch. Together, these practices stabilized deployments and made delivery more predictable across teams.
+		</Column>
+	</ContentRow>
+
+	<ListDetails
+		grid="md:grid-col-2 lg:grid-col-3"
+		spacing="g-md-1 lg:g-md-5"
+		items={[
+		{
+			title: "Workflows",
+			description: "Defined QA processes with clear entry and exit criteria, ownership, and handoffs to ensure readiness and accountability.",
+			icon: "path"
+		},
+		{
+			title: "UAT",
+			description: "Introduced user testing so stakeholders checked requirements, found issues early, and approved before release.",
+			icon: "checklist"
+		},
+		{
+			title: "Documentation",
+			description: "Created concise QA guides, coverage matrices, and checklists that helped teams onboard quickly and execute consistently.",
+			icon: "memo",
+			class: "md:col-span-full lg:col-span-auto"
+		},
+		]}
+	/>
+</Section>
+
+
+{/* RESULTS SECTION */}
+<Section class="section-space section-row-gap" aria="results-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="results-section"
+			heading="The results"
+			headingTag="h2"
+			lead="Deployments became faster, defects dropped, and quality gained visibility across teams."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Clear impact on delivery and trust"
+		/>
+		The Quality Management System transformed how illumina.com projects were delivered. By shifting validation earlier, teams cut release times in half and reduced defects that once reached production. Jira workflows and test cases created accountability and gave leadership visibility into progress. UAT built confidence with stakeholders, while device and browser coverage protected the user experience. Together, these changes made quality a shared success.
+		</Column>
+	</ContentRow>
+
+	<ListBullets
+		items={[
+		{
+			title: "Deployment speed",
+			description: "Release times were cut by nearly half, reducing overnight pushes and freeing teams to focus on improvements instead of firefighting late launches.",
+		},
+		{
+			title: "Defect reduction",
+			description: "Bugs were caught before reaching production, lowering rework and support costs, while protecting revenue streams and preserving user trust.",
+		},
+		{
+			title: "Team alignment",
+			description: "Developers, designers, and QA collaborated through shared workflows and test cases, strengthening accountability and reducing last-minute churn.",
+		},
+		{
+			title: "Stakeholder visibility",
+			description: "UAT and detailed reporting gave leadership confidence in delivery timelines and site quality, improving trust and visibility across digital projects.",
+		},
+		{
+			title: "User experience",
+			description: "Browser and device coverage ensured critical user journeys worked everywhere, preventing costly failures and protecting brand experience at release.",
+		},
+		]}
+	/>
+</Section>
+
+
+{/* REFLECTION SECTION */}
+<Section class="section-space section-row-gap" aria="reflection-section">
+	<ContentRow
+		grid="lg:grid-col-6-6"
+		spacing="content-row-gap"
+	>
+		<Column class="column-gap-fill">
+		<ContentBlock
+			aria="reflection-section"
+			heading="Reflection"
+			headingTag="h2"
+			lead="Quality became everyone's job, not just a process owned by QA alone."
+		/>
+		</Column>
+		<Column class="last-p">
+		<ContentBlock
+			subheading="Lessons from building quality culture"
+		/>
+		Implementing a Quality Management System was painstaking at times, but it proved that discipline pays off. Defining requirements, documenting workflows, and running thorough tests felt tedious, yet those practices gave teams confidence and protected users. The biggest lesson was cultural—quality isn’t the job of one role, it’s shared. When everyone cares about quality, work moves faster and outcomes improve for both the business and the customer.
+
+		<ContentBlock
+			subheading="Curious where to go from here?"
+		/>
+		These are short-form case studies designed for quick reading. I'd be happy to walk through this case study in more detail over a quick chat.
+
+			<ButtonGroup>
+				<Button 
+				label="Let's connect"
+				href="https://www.linkedin.com/in/burtcrismore/"
+				variant="primary"
+				icon="newTab"
+				iconPosition="right"
+				target="_blank"
+				ariaDescribedBy="connect-on-linkedin"
+				ariaDescription="Link opens in a new tab and directs to LinkedIn.com."
+				/>
+			</ButtonGroup>
+		</Column>
+	</ContentRow>
+</Section>

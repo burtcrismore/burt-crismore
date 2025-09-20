@@ -40,6 +40,7 @@ Listings
 		text-decoration: none;
 		position: relative;
 		background: token(color-surface-subtle);
+		align-self: start;
 
 		@include breakpoint("sm", $breakpoints) {
 			margin-left: 30px;
